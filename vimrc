@@ -24,3 +24,6 @@ set cursorline
 
 "Sets colorscheme to be 'desert'
 colorscheme desert
+
+"Sets jj to be esc
+imap jj <Esc>

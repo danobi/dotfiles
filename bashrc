@@ -5,8 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+
+#set -o vi
+
+
 
 # Accessibility
 alias sch='cd ~/Documents/School'
@@ -24,7 +27,8 @@ alias lk='xscreensaver-command --lock'
 alias hib='sudo pm-hibernate'
 alias la='ls -a'
 alias c='clear'
-alias sshdogevnc='ssh 130.126.63.181 -L 8900/localhost/5901'  #VNC usage
-alias sshdoge='ssh 130.126.63.181'
+alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
+alias sshdoge='ssh daniel@130.126.63.181'
+alias ls='ls --color=auto'
 #Clarity
 alias calc='bc -l'
