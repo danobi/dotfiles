@@ -18,3 +18,6 @@ set shiftwidth=4
 
 "Always shows info on bottom
 set ruler
+
+"Adds a line under the current line
+set cursorline
