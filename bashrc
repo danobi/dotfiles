@@ -5,11 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+#Original prompt
+#PS1='[\u@\h \W]\$ '
 
+#Bash prompt
+PS1="\[\e[0m\]» \[\e[1;37m\]\u\[\e[0m\] » [\[\e[1;37m\]\W\[\e[0m\]]\[\e[1;37m\]:\[\e[0m\] "
+
+#Uncomment if vi keybindings wanted -> WARNING: mandatory esc keybind annoying
 #set -o vi
-
-
 
 # Accessibility
 alias sch='cd ~/Documents/School'
