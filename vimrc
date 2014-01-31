@@ -21,3 +21,6 @@ set ruler
 
 "Adds a line under the current line
 set cursorline
+
+"Sets colorscheme to be 'desert'
+colorscheme desert
