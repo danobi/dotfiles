@@ -27,3 +27,21 @@ colorscheme desert
 
 "Sets jj to be esc
 imap jj <Esc>
+
+"Shows partially completed commands
+set showcmd
+
+"Ignores case in searches
+set ignorecase
+
+"Sets incremental search
+set incsearch
+
+"Shows matching brackets
+set showmatch
+
+"No error bells
+set noerrorbells
+
+"Shows mode
+set showmode
