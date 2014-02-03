@@ -34,5 +34,6 @@ alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
 alias pacs='sudo pacman -S'
 alias sshdoge='ssh daniel@130.126.63.181'
 alias ls='ls --color=auto'
+alias printjobs='firefox localhost:631/printers/HP_DeskJet_930C'
 #Clarity
 alias calc='bc -l'
