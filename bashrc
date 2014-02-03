@@ -31,6 +31,7 @@ alias hib='sudo pm-hibernate'
 alias la='ls -a'
 alias c='clear'
 alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
+alias pacs='sudo pacman -S'
 alias sshdoge='ssh daniel@130.126.63.181'
 alias ls='ls --color=auto'
 #Clarity
