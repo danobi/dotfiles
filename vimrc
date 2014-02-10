@@ -10,6 +10,9 @@ set nu
 "Makes a closing bracket when typing an open one
 inoremap { {}<Esc>i
 
+"Makes a closing parenthesis when typing an open one
+inoremap ( ()<Esc>i
+
 "Indents based on previous line
 set autoindent
 
