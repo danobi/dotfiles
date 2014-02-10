@@ -8,7 +8,7 @@ syntax on
 set nu
 
 "Makes a closing bracket when typing an open one
-inoremap { {}<Esc>i
+inoremap { {}<Esc>i<Return><Esc>O<Tab>
 
 "Makes a closing parenthesis when typing an open one
 inoremap ( ()<Esc>i
