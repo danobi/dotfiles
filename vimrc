@@ -11,7 +11,7 @@ set nu
 inoremap { {}<Esc>i<Return><Esc>O<Tab>
 
 "Makes a closing parenthesis when typing an open one
-inoremap ( ()<Esc>i
+"inoremap ( ()<Esc>i
 
 "Indents based on previous line
 set autoindent
