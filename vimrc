@@ -51,3 +51,6 @@ set visualbell
 
 "Shows mode
 set showmode
+
+"Start pathogen (module manager)
+execute pathogen#infect()
