@@ -54,3 +54,6 @@ set showmode
 
 "Start pathogen (module manager)
 execute pathogen#infect()
+
+"Let syntastic check header files
+let g:syntastic_cpp_check_header = 1
