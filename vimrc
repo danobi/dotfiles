@@ -55,5 +55,17 @@ set showmode
 "Start pathogen (module manager)
 execute pathogen#infect()
 
-"Let syntastic check header files
+"Syntastic configs
+let g:syntastic_cpp_checkers = ['gcc']
+"let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_check_header = 1
+
+"YouCompleteMe configs
+let g:ycm_server_use_vim_stdout = 1
+let g:ycm_min_num_of_chars_for_completion = 1
+let g:ycm_complete_in_comments_and_strings = 1
+
+"Turn on omni completion
+"filetype plugin on
+"set omnifunc=syntaxcomplete#Complete
+
