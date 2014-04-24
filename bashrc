@@ -9,7 +9,7 @@
 #PS1='[\u@\h \W]\$ '
 
 #Bash prompt
-PS1="\[\e[0m\]» \[\e[1;37m\]\u\[\e[0m\] » [\[\e[1;37m\]\W\[\e[0m\]]\[\e[1;37m\]:\[\e[0m\] "
+PS1="\[\e[0m\]» \[\e[1;31m\]\u\[\e[0m\] » [\[\e[1;31m\]\W\[\e[0m\]]\[\e[1;31m\]:\[\e[0m\] "
 
 #Uncomment if vi keybindings wanted -> WARNING: mandatory esc keybind annoying
 #set -o vi
@@ -33,6 +33,7 @@ alias la='ls -a'
 alias c='clear'
 alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
 alias pacs='sudo pacman -S'
+alias sag='sudo apt-get install'
 alias sshdoge='ssh daniel@130.126.62.47'
 alias ls='ls --color=auto'
 alias printjobs='firefox localhost:631/printers/HP_DeskJet_930C'
