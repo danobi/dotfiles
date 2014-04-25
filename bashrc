@@ -29,6 +29,7 @@ alias cp='cp -i'
 alias sco='xset dpms force off'
 alias lk='xscreensaver-command --lock'
 alias hib='sudo pm-hibernate'
+alias sus='sudo pm-suspend'
 alias la='ls -a'
 alias c='clear'
 alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
