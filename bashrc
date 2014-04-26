@@ -16,7 +16,7 @@ PS1="\[\e[0m\]» \[\e[1;31m\]\u\[\e[0m\] » [\[\e[1;31m\]\W\[\e[0m\]]\[\e[1;31m\
 
 # Accessibility
 alias sch='cd ~/Documents/School'
-alias cs='cd ~/Documents/School/CS/225/mp6'
+alias cs='cd ~/Documents/School/CS/225/mp7'
 alias doc='cd ~/Documents'
 alias pro='cd ~/Documents/Programming'
 alias db='cd ~/Dropbox'
@@ -29,6 +29,7 @@ alias cp='cp -i'
 alias sco='xset dpms force off'
 alias lk='xscreensaver-command --lock'
 alias hib='sudo pm-hibernate'
+alias sus='sudo pm-suspend'
 alias la='ls -a'
 alias c='clear'
 alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
