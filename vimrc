@@ -1,3 +1,10 @@
+"Handles filetype detection
+if has("autocmd")
+	filetype on
+	filetype indent on
+	filetype plugin on
+endif
+
 "Sets a tab to be 4 spaces
 set ts=4
 
