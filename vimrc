@@ -16,7 +16,7 @@ syntax on
 set nu
 
 "Makes a closing bracket when typing an open one
-inoremap { {}<Esc>i<Return><Esc>O<Tab>
+inoremap { {}<Esc>i<Return><Esc>O
 
 "Makes a closing parenthesis when typing an open one
 "inoremap ( ()<Esc>i
@@ -66,7 +66,7 @@ execute pathogen#infect()
 "Syntastic configs
 let g:syntastic_cpp_checkers = ['gcc']
 "let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_check_header = 0
 
 "YouCompleteMe configs
 let g:ycm_server_use_vim_stdout = 1
@@ -77,3 +77,5 @@ let g:ycm_complete_in_comments_and_strings = 1
 "filetype plugin on
 "set omnifunc=syntaxcomplete#Complete
 
+"Map f4 to tagbar
+nmap <F4> :TagbarToggle<CR>
