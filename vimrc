@@ -79,3 +79,6 @@ let g:ycm_complete_in_comments_and_strings = 1
 
 "Map f4 to tagbar
 nmap <F4> :TagbarToggle<CR>
+
+"Hide gui toolbar
+set guioptions-=T
