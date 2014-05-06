@@ -18,12 +18,14 @@ if has("gui_running")
   set lines=60 columns=90
 else
   " This is console Vim.
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=100
-  endif
+  " do nothing, uncomment below if you want terminal size to change
+
+  "if exists("+lines")
+  "  set lines=50
+  "endif
+  "if exists("+columns")
+  "  set columns=100
+  "endif
 endif
 
 "Use tab to complete words when typing
