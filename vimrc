@@ -54,7 +54,7 @@ set showmatch
 "No error bells
 set noerrorbells
 
-"Set visual bells
+"Show visual bells
 set visualbell
 
 "Shows mode
