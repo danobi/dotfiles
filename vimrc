@@ -83,3 +83,6 @@ function! Tab_Or_Complete()
   endif
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
+"Hide gui toolbar
+set guioptions-=T
