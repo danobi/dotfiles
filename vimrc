@@ -68,14 +68,18 @@ let g:syntastic_cpp_checkers = ['gcc']
 "let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_check_header = 0
 
-"YouCompleteMe configs
-let g:ycm_server_use_vim_stdout = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_complete_in_comments_and_strings = 1
-
-"Turn on omni completion
-"filetype plugin on
-"set omnifunc=syntaxcomplete#Complete
-
 "Map f4 to tagbar
 nmap <F4> :TagbarToggle<CR>
+
+"Get rid of comment on new line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"Use tab to complete words when typing
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+	  return "\<C-N>"
+  else
+	  return "\<Tab>"
+  endif
+endfunction
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
