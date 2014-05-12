@@ -61,11 +61,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "Makes the >> width 4
 set shiftwidth=4
 
-"Makes a closing parenthesis when typing an open one                         
-"inoremap ( ()<Esc>i
-
 "Indents based on previous line
 set autoindent
+
+"Creates end parenthesis and skips over last one if typed again
+inoremap        (  ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 """---------------END SYNTAX RELATED-------------------"""
 
@@ -118,3 +119,6 @@ set showmatch
 "No error bells
 set noerrorbells
 """------------------END UTILITY----------------------"""
+
+
+""test commands
