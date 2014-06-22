@@ -2,6 +2,8 @@
 """Feel free to use and edit this to your liking"""
 """May 2014"""
 
+"Start pathogen (module manager)
+execute pathogen#infect()
 
 """----------------------FUNCTIONS---------------------"""
 "Handles filetype detection
@@ -72,7 +74,8 @@ inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")
 
 """------------------VISUAL STUFF----------------------"""
 "Sets colorscheme to be 'desert'
-colorscheme desert
+"colorscheme desert
+colorscheme kolor
 
 "Shows line numbers
 set nu
@@ -88,9 +91,6 @@ set visualbell
 
 "Shows mode
 set showmode
-
-"Start pathogen (module manager)
-execute pathogen#infect()
 
 "Map f4 to tagbar
 nmap <F4> :TagbarToggle<CR>
