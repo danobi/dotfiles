@@ -35,6 +35,7 @@ alias c='clear'
 alias sshdogevnc='ssh daniel@130.126.63.181 -L 8900/localhost/5901'  #VNC usage
 alias pacs='sudo pacman -S'
 alias sag='sudo apt-get install'
+alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias sshdoge='ssh daniel@130.126.62.47'
 alias ls='ls --color=auto'
 alias printjobs='firefox localhost:631/printers/HP_DeskJet_930C'
