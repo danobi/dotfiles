@@ -16,7 +16,8 @@ PS1="\[\e[0m\]» \[\e[1;31m\]\u\[\e[0m\] » [\[\e[1;31m\]\W\[\e[0m\]]\[\e[1;31m\
 
 # Accessibility
 alias sch='cd ~/Documents/School'
-alias cs='cd ~/Documents/School/CS/225/mp7'
+alias cs233='cd ~/Documents/School/CS233/dlxu2'
+alias cs241='cd ~/Documents/School/CS241/dlxu2'
 alias doc='cd ~/Documents'
 alias pro='cd ~/Documents/Programming'
 alias db='cd ~/Dropbox'
