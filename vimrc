@@ -50,7 +50,7 @@ syntax on
 set ts=4
 
 "Makes a closing bracket when typing an open one
-inoremap { {}<Esc>i<Return><Esc>O
+"inoremap { {}<Esc>i<Return><Esc>O
 
 "Syntastic configs
 let g:syntastic_cpp_checkers = ['gcc']
