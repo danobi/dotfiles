@@ -40,5 +40,7 @@ alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias sshdoge='ssh daniel@130.126.62.47'
 alias ls='ls --color=auto'
 alias printjobs='firefox localhost:631/printers/HP_DeskJet_930C'
-#Clarity
+# Clarity
 alias calc='bc -l'
+# Useful
+export PAGER="most"   # colorized man pages
