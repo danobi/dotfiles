@@ -5,11 +5,35 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#Original prompt
+# Original prompt
 #PS1='[\u@\h \W]\$ '
 
-#Bash prompt
+# Bash prompt
 PS1="\[\e[0m\]» \[\e[1;31m\]\u\[\e[0m\] » [\[\e[1;31m\]\W\[\e[0m\]]\[\e[1;31m\]:\[\e[0m\] "
+
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+	    . /usr/share/bash-completion/bash_completion
+
+# Autocompletion of package names
+# And alias for apt-get
+alias sag='sudo apt-get install'
+__apt_install_completion()
+{
+	# copied out of /usr/share/bash-completion/completions/apt-get:_apt_get()
+	# Get information about completion
+	local cur prev words cword
+	_init_completion || return
+
+	 Generate list of matching packages
+	 COMPREPLY=( $( apt-cache --no-generate pkgnames "$cur" \
+		 2> /dev/null ) )
+	 return 0
+} &&
+complete -F __apt_install_completion sag
+
+# History size
+HISTFILESIZE=10000
 
 #Uncomment if vi keybindings wanted -> WARNING: mandatory esc keybind annoying
 #set -o vi
@@ -44,3 +68,4 @@ alias printjobs='firefox localhost:631/printers/HP_DeskJet_930C'
 alias calc='bc -l'
 # Useful
 export PAGER="most"   # colorized man pages
+export TERM=xterm-256color # colorized vim for example
