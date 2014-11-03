@@ -58,7 +58,7 @@ let g:syntastic_cpp_checkers = ['gcc']
 let g:syntastic_cpp_check_header = 0
 
 "Get rid of comment on new line
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "Makes the >> width 4
 set shiftwidth=4
@@ -101,11 +101,19 @@ set showcmd
 "Hide gui toolbar
 set guioptions-=T
 
+"Configure airline
+set laststatus=2  "Makes airline show up w/o needing a split
+"let g:airline_theme='kolor'
+
 """---------------END VISUAL STUFF--------------------"""
 
 """-------------------UTILITY-------------------------"""
 "Sets jj to be esc
 imap jj <Esc>
+
+"Sets <C-n> and <C-p> to cycle through buffers
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
 
 "Ignores case in searches
 set ignorecase
