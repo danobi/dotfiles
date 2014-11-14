@@ -40,6 +40,12 @@ function! Tab_Or_Complete()
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+"Terminal color
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+	  set t_Co=256
+endif
+
+
 """-------------------END FUNCTIONS--------------------"""
 
 """---------------SYNTAX RELATED-----------------------"""
@@ -67,14 +73,18 @@ set shiftwidth=4
 set autoindent
 
 "Creates end parenthesis and skips over last one if typed again
-inoremap        (  ()<Left>
-inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+"inoremap        (  ()<Left>
+"inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 """---------------END SYNTAX RELATED-------------------"""
 
 """------------------VISUAL STUFF----------------------"""
 "Sets colorscheme to be 'desert'
 "colorscheme desert
+let g:kolor_italic=1                    " Enable italic. Default: 1
+let g:kolor_bold=1                      " Enable bold. Default: 1
+let g:kolor_underlined=0                " Enable underline. Default: 0
+let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
 colorscheme kolor
 
 "Shows line numbers
@@ -95,6 +105,9 @@ set showmode
 "Map f4 to tagbar
 nmap <F4> :TagbarToggle<CR>
 
+"Map \e to NERDTree
+nmap \e :NERDTreeToggle<CR>
+
 "Shows partially completed commands
 set showcmd
 
@@ -105,6 +118,9 @@ set guioptions-=T
 set laststatus=2  "Makes airline show up w/o needing a split
 "let g:airline_theme='kolor'
 
+"Remove parenthesis highlighting
+let g:loaded_matchparen=1
+
 """---------------END VISUAL STUFF--------------------"""
 
 """-------------------UTILITY-------------------------"""
@@ -114,6 +130,13 @@ imap jj <Esc>
 "Sets <C-n> and <C-p> to cycle through buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+
+"Sets <Leader>w to :w<CR>
+nmap <Leader>w :w<CR>
+
+"Set ctrl-p to invoke ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 "Ignores case in searches
 set ignorecase
