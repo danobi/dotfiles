@@ -69,3 +69,5 @@ alias calc='bc -l'
 # Useful
 export PAGER="most"   # colorized man pages
 export TERM=xterm-256color # colorized vim for example
+# PATHS
+export PATH=/home/dan/Development/Eclipse_adt_bundle/android-ndk-r10c:$PATH

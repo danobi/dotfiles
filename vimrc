@@ -61,7 +61,9 @@ set ts=4
 "Syntastic configs
 let g:syntastic_cpp_checkers = ['gcc']
 "let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_check_header = 0
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_auto_refresh_includes = 1
+let g:syntastic_cpp_include_dirs = ['/home/dan/Dev_tools/oxygine-framework-with-sdl/oxygine-framework/oxygine/src', '/home/dan/Dev_tools/oxygine-framework-with-sdl/oxygine-framework/oxygine/src/core']
 
 "Get rid of comment on new line
 "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -127,16 +129,12 @@ let g:loaded_matchparen=1
 "Sets jj to be esc
 imap jj <Esc>
 
-"Sets <C-n> and <C-p> to cycle through buffers
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+"Sets <C-n> and <C-p> to cycle through tabs
+nmap <C-n> :tabn<CR>
+nmap <C-p> :tabp<CR>
 
 "Sets <Leader>w to :w<CR>
 nmap <Leader>w :w<CR>
-
-"Set ctrl-p to invoke ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 "Ignores case in searches
 set ignorecase
