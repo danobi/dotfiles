@@ -59,11 +59,17 @@ set ts=4
 "inoremap { {}<Esc>i<Return><Esc>O
 
 "Syntastic configs
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_c_checkers = ['clang_check']
 let g:syntastic_cpp_checkers = ['gcc']
-"let g:syntastic_cpp_compiler = 'gcc'
+let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
-let g:syntastic_cpp_include_dirs = ['/home/dan/Dev_tools/oxygine-framework-with-sdl/oxygine-framework/oxygine/src', '/home/dan/Dev_tools/oxygine-framework-with-sdl/oxygine-framework/oxygine/src/core']
 
 "Get rid of comment on new line
 "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -73,10 +79,6 @@ set shiftwidth=4
 
 "Indents based on previous line
 set autoindent
-
-"Creates end parenthesis and skips over last one if typed again
-"inoremap        (  ()<Left>
-"inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 """---------------END SYNTAX RELATED-------------------"""
 
@@ -147,6 +149,9 @@ set showmatch
 
 "No error bells
 set noerrorbells
+
+"More powerful backspace
+set backspace=indent,eol,start
 """------------------END UTILITY----------------------"""
 
 
