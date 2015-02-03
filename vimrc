@@ -66,7 +66,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_c_checkers = ['clang_check']
-let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
+let g:syntastic_cpp_checkers = ['clang_check']
 let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_auto_refresh_includes = 1
@@ -134,6 +136,10 @@ imap jj <Esc>
 "Sets <C-n> and <C-p> to cycle through tabs
 nmap <C-n> :tabn<CR>
 nmap <C-p> :tabp<CR>
+
+"Sets j and k to gj and gk
+nnoremap j gj
+nnoremap k gk
 
 "Sets <Leader>w to :w<CR>
 nmap <Leader>w :w<CR>
