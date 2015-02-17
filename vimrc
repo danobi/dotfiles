@@ -86,12 +86,12 @@ set autoindent
 
 """------------------VISUAL STUFF----------------------"""
 "Sets colorscheme to be 'desert'
-"colorscheme desert
-let g:kolor_italic=1                    " Enable italic. Default: 1
-let g:kolor_bold=1                      " Enable bold. Default: 1
-let g:kolor_underlined=0                " Enable underline. Default: 0
-let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
-colorscheme kolor
+"let g:kolor_italic=1                    " Enable italic. Default: 1
+"let g:kolor_bold=1                      " Enable bold. Default: 1
+"let g:kolor_underlined=0                " Enable underline. Default: 0
+"let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
+"colorscheme kolor
+colorscheme itg_flat
 
 "Shows line numbers
 set nu
@@ -125,7 +125,7 @@ set laststatus=2  "Makes airline show up w/o needing a split
 "let g:airline_theme='kolor'
 
 "Remove parenthesis highlighting
-let g:loaded_matchparen=1
+"let g:loaded_matchparen=1
 
 """---------------END VISUAL STUFF--------------------"""
 
