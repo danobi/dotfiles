@@ -85,12 +85,7 @@ set autoindent
 """---------------END SYNTAX RELATED-------------------"""
 
 """------------------VISUAL STUFF----------------------"""
-"Sets colorscheme to be 'desert'
-"let g:kolor_italic=1                    " Enable italic. Default: 1
-"let g:kolor_bold=1                      " Enable bold. Default: 1
-"let g:kolor_underlined=0                " Enable underline. Default: 0
-"let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
-"colorscheme kolor
+"Set itg_flat colorscheme
 colorscheme itg_flat
 
 "Shows line numbers
@@ -158,7 +153,10 @@ set noerrorbells
 
 "More powerful backspace
 set backspace=indent,eol,start
+
+"Set up vim-session stuff
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
 """------------------END UTILITY----------------------"""
-
-
-""test commands

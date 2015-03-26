@@ -82,7 +82,7 @@ alias db='cd ~/Dropbox'
 # Safety nets
 alias mv='mv -i'
 alias cp='cp -i'
-alias vim='nvim'
+#alias vim='nvim'
 # Shorterners
 alias hib='sudo pm-hibernate'
 alias sus='sudo pm-suspend'
