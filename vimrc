@@ -18,16 +18,6 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=60 columns=90
-else
-  " This is console Vim.
-  " do nothing, uncomment below if you want terminal size to change
-
-  "if exists("+lines")
-  "  set lines=50
-  "endif
-  "if exists("+columns")
-  "  set columns=100
-  "endif
 endif
 
 "Use tab to complete words when typing
@@ -135,6 +125,12 @@ nmap <C-p> :tabp<CR>
 "Sets j and k to gj and gk
 nnoremap j gj
 nnoremap k gk
+
+"Move windows with C-Direction
+map <C-J> <C-w>j
+map <C-K> <C-w>k
+map <C-H> <C-w>h
+map <C-L> <C-w>l
 
 "Sets <Leader>w to :w<CR>
 nmap <Leader>w :w<CR>
