@@ -30,6 +30,16 @@ function! Tab_Or_Complete()
 endfunction
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 
+"Toggles relative and absolute line numbers
+function! Line_Number_Toggle()
+	if(&relativenumber == 1)
+		set number
+	else
+		set relativenumber
+	endif
+endfunction
+nnoremap <Leader>r :call Line_Number_Toggle()<CR>
+
 "Terminal color
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
 	  set t_Co=256
@@ -97,7 +107,8 @@ set showmode
 nmap <F4> :TagbarToggle<CR>
 
 "Map \e to NERDTree
-nmap \e :NERDTreeToggle<CR>
+nmap <Leader>e :NERDTreeToggle<CR>
+
 
 "Shows partially completed commands
 set showcmd
@@ -108,9 +119,6 @@ set guioptions-=T
 "Configure airline
 set laststatus=2  "Makes airline show up w/o needing a split
 "let g:airline_theme='kolor'
-
-"Remove parenthesis highlighting
-"let g:loaded_matchparen=1
 
 """---------------END VISUAL STUFF--------------------"""
 
@@ -132,11 +140,23 @@ map <C-K> <C-w>k
 map <C-H> <C-w>h
 map <C-L> <C-w>l
 
+"Typing J/K to 5j and 5k
+nmap J 5j
+nmap K 5k
+xmap J 5j
+xmap K 5k
+
 "Sets <Leader>w to :w<CR>
 nmap <Leader>w :w<CR>
 
+"Sets <Leader>j to :join
+nmap <Leader>j :join<CR>
+
 "Ignores case in searches
 set ignorecase
+
+"Case sensitive if search starts with uppercase
+set smartcase
 
 "Sets incremental search
 set incsearch

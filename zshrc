@@ -91,5 +91,6 @@ alias c='clear'
 alias sag='sudo apt-get install'
 alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias ls='ls --color=auto'
+alias e='exit'
 # Clarity
 alias calc='bc -l'
