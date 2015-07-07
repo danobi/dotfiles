@@ -50,10 +50,15 @@ set smartcase 			   		"Case sensitive if search starts with uppercase
 set incsearch 			   		"Incremental search
 set showmatch 			   		"Highlight matching bracket
 set ts=4 				   		"Sets a tab to be 4 spaces
-set shiftwidth=4 		   		"Makes the >> width 4
+set shiftwidth=2 		   		"Makes the >> width 2
 set backspace=indent,eol,start  "More powerful backspace
 set guioptions-=T 				"Hide GUI toolbar
 set laststatus=2  				"Airline config: Makes airline show up w/o needing a split
+set tabstop=2
+set softtabstop=2
+set expandtab
+set textwidth=120
+set foldmethod=manual
 
 "Remaps
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
@@ -76,6 +81,10 @@ xmap K 5k
 nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
 nmap <Leader>m <C-w>|
+inoremap <F9> <C-O>za      "Makes F9 toggle a fold
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
 ""Makes a closing bracket when typing an open one
 "inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
@@ -105,20 +114,6 @@ endfunction
 """-------------------------------------------"""
 """              PLUGIN CONFIG                """
 """-------------------------------------------"""
-"Syntastic configs
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_c_checkers = ['clang_check']
-let g:syntastic_c_check_header = 1
-let g:syntastic_c_auto_refresh_includes = 1
-let g:syntastic_cpp_checkers = ['clang_check']
-let g:syntastic_cpp_compiler = 'gcc'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_auto_refresh_includes = 1
-
 "vim-session config
 let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
