@@ -22,6 +22,11 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 	  set t_Co=256
 endif
 
+"tmux configs
+if (exists('$TMUX'))
+    set t_Co=256
+endif
+
 "Start pathogen (module manager)
 execute pathogen#infect()
 
@@ -70,6 +75,7 @@ xmap J 5j
 xmap K 5k
 nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
+nmap <Leader>m <C-w>|
 ""Makes a closing bracket when typing an open one
 "inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
@@ -100,9 +106,9 @@ endfunction
 """              PLUGIN CONFIG                """
 """-------------------------------------------"""
 "Syntastic configs
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_c_checkers = ['clang_check']
@@ -118,4 +124,5 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
+
 

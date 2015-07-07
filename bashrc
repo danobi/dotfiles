@@ -23,3 +23,7 @@ alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias calc='bc -l'
 # Useful
 export TERM=xterm-256color # colorized vim
+alias tmux='tmux -2' # force tmux to assume 256 color support for terminal
+# PATHS
+export PATH=/home/dan/Development/Eclipse_adt_bundle/android-ndk-r10c:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
