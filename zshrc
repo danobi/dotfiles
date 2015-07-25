@@ -49,7 +49,8 @@ plugins=(git svn dirhistory sudo)
 
 # User configuration
 
-export PATH="/home/dan/Development/Eclipse_adt_bundle/android-ndk-r10c:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export PATH="~/Dev_tools/PebbleSDK-3.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+export GOPATH=/home/dan/Documents/Coding/Go
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
