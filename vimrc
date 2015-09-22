@@ -30,6 +30,22 @@ endif
 "Start pathogen (module manager)
 execute pathogen#infect()
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'majutsushi/tagbar'
+Plugin 'wincent/command-t'
+Plugin 'bling/vim-airline'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
 """-------------------------------------------"""
@@ -124,5 +140,3 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-

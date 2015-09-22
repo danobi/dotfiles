@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/dan/.oh-my-zsh
+export ZSH=/home/daniel/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -48,11 +48,9 @@ ZSH_THEME="sunrise"
 plugins=(git svn dirhistory sudo)
 
 # User configuration
-
-export PATH="~/Dev_tools/PebbleSDK-3.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
-export GOPATH=/home/dan/Documents/Coding/Go
-# export MANPATH="/usr/local/man:$MANPATH"
-
+export PATH="/usr/local/bin:/usr/bin:/bin:/home/daniel/.gem/ruby/2.2.0/bin"
+export TERM=xterm-256color
+#eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -91,7 +89,10 @@ alias la='ls -a'
 alias c='clear'
 alias sag='sudo apt-get install'
 alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
+alias pacs='sudo pacman -S'
 alias ls='ls --color=auto'
 alias e='exit'
+alias tmux="TERM=screen-256color-bce tmux"
+alias vim="TERM=screen-256color vim"
 # Clarity
 alias calc='bc -l'
