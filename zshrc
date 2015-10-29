@@ -48,10 +48,11 @@ ZSH_THEME="sunrise"
 plugins=(git svn dirhistory sudo)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/home/daniel/.gem/ruby/2.2.0/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/home/daniel/.gem/ruby/2.2.0/bin:/home/daniel/.local/bin"
 export TERM=xterm-256color
 #eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
+source /usr/share/autojump/autojump.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -94,5 +95,6 @@ alias ls='ls --color=auto'
 alias e='exit'
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="TERM=screen-256color vim"
+alias cl="clear && ls"
 # Clarity
 alias calc='bc -l'
