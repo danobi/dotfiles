@@ -49,7 +49,7 @@ plugins=(git svn dirhistory sudo)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/home/daniel/.gem/ruby/2.2.0/bin:/home/daniel/.local/bin"
-export TERM=xterm-256color
+export TERM=screen-256color
 #eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
 source /usr/share/autojump/autojump.zsh
