@@ -65,5 +65,3 @@ done
 
 # install and chsh to zsh
 install_zsh
-
-

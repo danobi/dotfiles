@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/daniel/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -48,7 +48,7 @@ ZSH_THEME="sunrise"
 plugins=(git svn dirhistory sudo)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/home/daniel/.gem/ruby/2.2.0/bin:/home/daniel/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:~/.gem/ruby/2.2.0/bin:~/.local/bin"
 export TERM=screen-256color
 #eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
