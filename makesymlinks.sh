@@ -37,7 +37,7 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
 	fi
 	# Set the default shell to zsh if it isn't currently set to zsh
 	if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-		chsh -s $(which zsh)
+		sudo chsh -s $(which zsh)
 	fi
 else
 	# If zsh isn't installed, get the platform of the current machine
