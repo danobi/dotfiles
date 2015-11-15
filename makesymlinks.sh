@@ -23,18 +23,19 @@ else
 		if [[ -f /etc/redhat-release ]]; then
 			sudo yum install zsh
 			install_zsh
-		fi
-		if [[ -f /etc/debian_version ]]; then
+		elif [[ -f /etc/debian_version ]]; then
 			sudo apt-get install zsh
 			install_zsh
-		fi
-		if [[ -f /etc/arch_release ]]; then
+		elif [[ -f /etc/arch_release ]]; then
 			sudo pacman -S zsh
 			install_zsh
+		else
+			echo "Unhandled Linux distro - Please install zsh then re-run this script"
+			exit
 		fi
 		# If the platform is OS X, tell the user to install zsh :)
 	elif [[ $platform == 'Darwin' ]]; then
-		echo "Please install zsh, then re-run this script!"
+		echo "Please install zsh, then re-run this script"
 		exit
 	fi
 fi
