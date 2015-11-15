@@ -42,6 +42,10 @@ Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
 Plugin 'wincent/command-t'
 Plugin 'bling/vim-airline'
+Plugin 'szw/vim-tags'
+Plugin 'justinmk/vim-sneak'
+Plugin 'Raimondi/delimitMate'
+Plugin 'cdmedia/itg_flat_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
