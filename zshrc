@@ -45,7 +45,7 @@ ZSH_THEME="sunrise"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git svn dirhistory sudo)
+plugins=(git svn dirhistory sudo autojump)
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:~/.gem/ruby/2.2.0/bin:~/.local/bin"
