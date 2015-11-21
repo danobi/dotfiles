@@ -52,7 +52,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:~/.gem/ruby/2.2.0/bin:~/.local/bin"
 export TERM=screen-256color
 #eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
-source /usr/share/autojump/autojump.zsh
+#source /usr/share/autojump/autojump.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -91,10 +91,11 @@ alias c='clear'
 alias sag='sudo apt-get install'
 alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias pacs='sudo pacman -S'
-alias ls='ls --color=auto'
+alias ls='ls'
 alias e='exit'
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="TERM=screen-256color vim"
 alias cl="clear && ls"
+alias sshvm="ssh -p 8000 danielxu@127.0.0.1"
 # Clarity
 alias calc='bc -l'

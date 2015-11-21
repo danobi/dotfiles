@@ -27,9 +27,6 @@ if (exists('$TMUX'))
     set t_Co=256
 endif
 
-"Start pathogen (module manager)
-execute pathogen#infect()
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
