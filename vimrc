@@ -42,6 +42,7 @@ Plugin 'bling/vim-airline'
 Plugin 'szw/vim-tags'
 Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 
 " All of your Plugins must be added before the following line
@@ -141,3 +142,6 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
+
+"Add git to statusline
+set statusline+=%{fugitive#statusline()}
