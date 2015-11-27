@@ -42,6 +42,7 @@ Plugin 'bling/vim-airline'
 Plugin 'szw/vim-tags'
 Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
+Plugin 'tpoope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 
 " All of your Plugins must be added before the following line
