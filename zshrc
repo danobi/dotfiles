@@ -96,5 +96,6 @@ alias e='exit'
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="TERM=screen-256color vim"
 alias cl="clear && ls"
+alias o="xdg-open"
 # Clarity
 alias calc='bc -l'
