@@ -96,6 +96,7 @@ xmap K 5k
 nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
 nmap <Leader>m <C-w>|
+nmap <Space> /
 ""Makes a closing bracket when typing an open one
 "inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
