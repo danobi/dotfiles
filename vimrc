@@ -27,9 +27,6 @@ if (exists('$TMUX'))
     set t_Co=256
 endif
 
-"Start pathogen (module manager)
-execute pathogen#infect()
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -69,8 +66,10 @@ set ignorecase 			   		"Ignores case in searches
 set smartcase 			   		"Case sensitive if search starts with uppercase
 set incsearch 			   		"Incremental search
 set showmatch 			   		"Highlight matching bracket
-set ts=4 				   		"Sets a tab to be 4 spaces
-set shiftwidth=4 		   		"Makes the >> width 4
+set ts=2 				   		"Sets a tab to be 2 spaces
+set shiftwidth=2 		   		"Makes the >> width 2
+set softtabstop=2 				"Number of insert mode columns for a tab when tab is hit"
+set expandtab  				    "Spaces instead of tabs
 set backspace=indent,eol,start  "More powerful backspace
 set guioptions-=T 				"Hide GUI toolbar
 set laststatus=2  				"Airline config: Makes airline show up w/o needing a split
