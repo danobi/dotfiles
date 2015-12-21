@@ -3,6 +3,32 @@
 """-------------------------------------------"""
 """    	               INIT 			      """
 """-------------------------------------------"""
+" Required here because of Vundle interaction
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'majutsushi/tagbar'
+Plugin 'wincent/command-t'
+Plugin 'bling/vim-airline'
+Plugin 'szw/vim-tags'
+Plugin 'justinmk/vim-sneak'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-fugitive'
+Plugin 'cdmedia/itg_flat_vim'
+Plugin 'wting/rust.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
 "Handles filetype detection
 if has("autocmd")
 	filetype on
@@ -26,27 +52,6 @@ endif
 if (exists('$TMUX'))
     set t_Co=256
 endif
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'majutsushi/tagbar'
-Plugin 'wincent/command-t'
-Plugin 'bling/vim-airline'
-Plugin 'szw/vim-tags'
-Plugin 'justinmk/vim-sneak'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-fugitive'
-Plugin 'cdmedia/itg_flat_vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()
 
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
