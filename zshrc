@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sunrise"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,9 +50,7 @@ plugins=(git svn dirhistory sudo autojump)
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:~/.gem/ruby/2.2.0/bin:~/.local/bin"
 export TERM=screen-256color
-#eval `dircolors /home/daniel/Config/dircolors-solarized/dircolors.256dark`
 source $ZSH/oh-my-zsh.sh
-source /usr/share/autojump/autojump.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
