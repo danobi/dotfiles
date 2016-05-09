@@ -13,6 +13,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
@@ -84,7 +85,7 @@ set laststatus=2  				"Airline config: Makes airline show up w/o needing a split
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nmap <F4> :TagbarToggle<CR>
-nmap <Leader>e :NERDTreeToggle<CR>
+nmap <Leader>e <plug>NERDTreeTabsToggle<CR>
 imap jj <Esc>
 nmap <C-n> :tabn<CR>
 nmap <C-p> :tabp<CR>
