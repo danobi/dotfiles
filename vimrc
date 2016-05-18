@@ -103,6 +103,8 @@ nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
 nmap <Leader>m <C-w>|
 nmap <Space> /
+noremap Y y$
+inoremap <C-e> <C-o>$
 ""Makes a closing bracket when typing an open one
 "inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
