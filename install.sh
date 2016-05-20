@@ -28,7 +28,7 @@ echo "Moving any existing dotfiles from ~ to $olddir"
 done
 
 # Install Vundle and TPM
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 install_zsh () {
