@@ -156,3 +156,7 @@ let g:session_command_aliases = 1
 
 "Add git to statusline
 set statusline+=%{fugitive#statusline()}
+
+"Fix boxes in NERDTREE
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
