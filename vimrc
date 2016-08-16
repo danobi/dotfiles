@@ -18,7 +18,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
-Plugin 'wincent/command-t'
 Plugin 'bling/vim-airline'
 Plugin 'szw/vim-tags'
 Plugin 'justinmk/vim-sneak'
@@ -26,6 +25,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'wting/rust.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -83,6 +83,7 @@ set laststatus=2  				"Airline config: Makes airline show up w/o needing a split
 
 "Remaps
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nmap <F4> :TagbarToggle<CR>
 nmap <Leader>e <plug>NERDTreeTabsToggle<CR>
@@ -160,3 +161,7 @@ set statusline+=%{fugitive#statusline()}
 "Fix boxes in NERDTREE
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+
+"Bind ctrlp keybinding to <Leader>t
+let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
+let g:ctrlp_cmd = 'CtrlP'
