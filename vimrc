@@ -1,7 +1,7 @@
 """dlx's vimrc"""
 
 """-------------------------------------------"""
-"""    	               INIT 			      """
+"""                    INIT             """
 """-------------------------------------------"""
 " Required here because of Vundle interaction
 set nocompatible
@@ -32,9 +32,9 @@ call vundle#end()
 
 "Handles filetype detection
 if has("autocmd")
-	filetype on
-	filetype indent on
-	filetype plugin on
+  filetype on
+  filetype indent on
+  filetype plugin on
 endif
 
 "Makes window big in gvim
@@ -46,7 +46,7 @@ endif
 
 "Turn terminal color on
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-	  set t_Co=256
+    set t_Co=256
 endif
 
 "tmux configs
@@ -61,25 +61,26 @@ endif
 "Built in settings
 syntax on
 colorscheme itg_flat
+fixdel                    "Sometimes hitting backspace in :command prints ^* instead
 set nu
-set ruler     			   		"Always shows info on bottom
-set cursorline             		"Highlight current line
+set ruler                 "Always shows info on bottom
+set cursorline            "Highlight current line
 set visualbell
 set noerrorbells
 set showmode
-set showcmd 			        "Shows partially completed commands
+set showcmd               "Shows partially completed commands
 set autoindent
-set ignorecase 			   		"Ignores case in searches
-set smartcase 			   		"Case sensitive if search starts with uppercase
-set incsearch 			   		"Incremental search
-set showmatch 			   		"Highlight matching bracket
-set ts=2 				   		"Sets a tab to be 2 spaces
-set shiftwidth=2 		   		"Makes the >> width 2
-set softtabstop=2 				"Number of insert mode columns for a tab when tab is hit"
-set expandtab  				    "Spaces instead of tabs
+set ignorecase            "Ignores case in searches
+set smartcase             "Case sensitive if search starts with uppercase
+set incsearch             "Incremental search
+set showmatch             "Highlight matching bracket
+set ts=2                  "Sets a tab to be 2 spaces
+set shiftwidth=2          "Makes the >> width 2
+set softtabstop=2         "Number of insert mode columns for a tab when tab is hit"
+set expandtab             "Spaces instead of tabs
 set backspace=indent,eol,start  "More powerful backspace
-set guioptions-=T 				"Hide GUI toolbar
-set laststatus=2  				"Airline config: Makes airline show up w/o needing a split
+set guioptions-=T         "Hide GUI toolbar
+set laststatus=2          "Airline config: Makes airline show up w/o needing a split
 
 "Remaps
 inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
@@ -117,19 +118,19 @@ inoremap <C-e> <C-o>$
 "Use tab to complete words when typing
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-	  return "\<C-N>"
+    return "\<C-N>"
   else
-	  return "\<Tab>"
+    return "\<Tab>"
   endif
 endfunction
 
 "Toggles relative and absolute line numbers
 function! Line_Number_Toggle()
-	if(&relativenumber == 1)
-		set number
-	else
-		set relativenumber
-	endif
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
 endfunction
 
 """-------------------------------------------"""
@@ -165,4 +166,3 @@ let g:NERDTreeDirArrowCollapsible="~"
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
 let g:ctrlp_cmd = 'CtrlP'
-fixdel                    "Sometimes hitting backspace in :command prints ^* instead
