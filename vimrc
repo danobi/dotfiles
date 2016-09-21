@@ -165,3 +165,4 @@ let g:NERDTreeDirArrowCollapsible="~"
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
 let g:ctrlp_cmd = 'CtrlP'
+fixdel                    "Sometimes hitting backspace in :command prints ^* instead
