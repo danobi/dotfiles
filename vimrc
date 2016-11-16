@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'wting/rust.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -107,6 +108,7 @@ nmap <Leader>m <C-w>|
 nmap <Space> /
 noremap Y y$
 inoremap <C-e> <C-o>$
+nnoremap <Leader>a :Ack!<Space>
 ""Makes a closing bracket when typing an open one
 "inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
@@ -166,3 +168,11 @@ let g:NERDTreeDirArrowCollapsible="~"
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
 let g:ctrlp_cmd = 'CtrlP'
+
+"Ack.vim config
+"Use Ag instead of Ack when available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+"Don't automatically jump to first result
+cnoreabbrev Ack Ack!
