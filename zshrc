@@ -39,3 +39,6 @@ alias tmux="TERM=screen-256color tmux"
 alias cl="clear && ls"
 alias o="xdg-open"
 alias calc='bc -l'
+
+# Git stuff
+alias gdh="gd HEAD"
