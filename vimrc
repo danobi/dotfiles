@@ -26,6 +26,7 @@ Plugin 'cdmedia/itg_flat_vim'
 Plugin 'wting/rust.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
