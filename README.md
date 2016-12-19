@@ -1,1 +1,3 @@
-These are my personal dotfiles. Feel free to view and use them as you wish.
+These are my personal dotfiles.
+
+All rights reserved, but feel free to do whatever with them.
