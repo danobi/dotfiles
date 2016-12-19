@@ -109,8 +109,6 @@ nmap <Space> /
 noremap Y y$
 inoremap <C-e> <C-o>$
 nnoremap <Leader>a :Ack!<Space>
-""Makes a closing bracket when typing an open one
-"inoremap { {}<Esc>i<Return><Esc>O   
 ""Get rid of comment on new line
 "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o    
 
