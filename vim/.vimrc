@@ -1,13 +1,13 @@
 """dlx's vimrc"""
 
 """-------------------------------------------"""
-"""                    INIT             """
+"""                    INIT                   """
 """-------------------------------------------"""
-" Required here because of Vundle interaction
+"Required here because of Vundle interaction
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
+"Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -28,7 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 
-" All of your Plugins must be added before the following line
+"All of your Plugins must be added before the following line
 call vundle#end()
 
 "Handles filetype detection
