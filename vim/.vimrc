@@ -160,3 +160,6 @@ if executable('ag')
 endif
 "Don't automatically jump to first result
 cnoreabbrev Ack Ack!
+
+"Make vim-gutentags tags file '.tags'
+let g:gutentags_tagfile=".tags"
