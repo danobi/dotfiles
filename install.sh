@@ -40,6 +40,11 @@ install_stuff () {
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   fi 
 
+  # Move the colliding .zshrc so stow doesn't error out
+  if [[ -e ~/.zshrc ]]; then
+    mv ~/.zshrc ~/.zshrc_OLD
+  fi
+
   # chsh over to zsh
   chsh -s $(which zsh)
 }
