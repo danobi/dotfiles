@@ -14,7 +14,7 @@ install_stuff () {
       PKG_MANAGER_CMD="sudo dnf install"
     elif [[ -f /etc/debian_version ]]; then
       PKG_MANAGER_CMD="sudo apt-get install"
-    elif [[ -f /etc/arch_release ]]; then
+    elif [[ -f /etc/arch-release ]]; then
       PKG_MANAGER_CMD="sudo pacman -S"
     else
       echo "Unhandled Linux distro -- giving up forever"
