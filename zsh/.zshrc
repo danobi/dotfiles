@@ -20,6 +20,9 @@ source $ZSH/oh-my-zsh.sh
 # This makes the colored-man-pages oh-my-zsh plugin work (no one knows why)
 export GROFF_NO_SGR=1
 
+# Do not save command lines into history if they are a repeat of the previous
+setopt HIST_IGNORE_DUPS
+
 # Aliases
 alias sch='cd ~/Documents/School'
 alias doc='cd ~/Documents'
