@@ -104,7 +104,8 @@ xmap J 5j
 xmap K 5k
 nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
-nmap <Leader>m <C-w>|
+nmap <Leader>m <C-w>\|
+nmap <Leader>= <C-w>=
 nmap <Space> /
 noremap Y y$
 inoremap <C-e> <C-o>$
