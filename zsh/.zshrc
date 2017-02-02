@@ -23,6 +23,9 @@ export GROFF_NO_SGR=1
 # Do not save command lines into history if they are a repeat of the previous
 setopt HIST_IGNORE_DUPS
 
+# Makes `sudoedit` work
+export EDITOR="/usr/bin/env vim"
+
 # Aliases
 alias sch='cd ~/Documents/School'
 alias doc='cd ~/Documents'
@@ -44,6 +47,7 @@ alias tmux="TERM=screen-256color tmux"
 alias cl="clear && ls"
 alias o="xdg-open"
 alias calc='bc -l'
+alias se='sudoedit'
 
 # Git stuff
 alias gdh="gd HEAD"
