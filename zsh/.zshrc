@@ -27,19 +27,12 @@ setopt HIST_IGNORE_DUPS
 export EDITOR="/usr/bin/env vim"
 
 # Aliases
-alias sch='cd ~/Documents/School'
-alias doc='cd ~/Documents'
-alias cod='cd ~/Documents/Coding'
-alias db='cd ~/Dropbox'
 alias mv='mv -i'
 alias cp='cp -i'
-alias hib='sudo pm-hibernate'
-alias sus='sudo pm-suspend'
 alias la='ls -a'
 alias c='clear'
 alias sdi='sudo dnf install'
 alias sag='sudo apt-get install'
-alias aptupdate='sudo apt-get update && sudo apt-get dist-upgrade'
 alias pacs='sudo pacman -S'
 alias ls='ls --color=auto'
 alias e='exit'
