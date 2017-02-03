@@ -128,7 +128,7 @@ endfunction
 "Toggles relative and absolute line numbers
 function! Line_Number_Toggle()
   if(&relativenumber == 1)
-    set number
+    set number norelativenumber
   else
     set relativenumber
   endif
