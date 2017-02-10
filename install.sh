@@ -44,9 +44,6 @@ install_stuff () {
   if [[ -e ~/.zshrc ]]; then
     mv ~/.zshrc ~/.zshrc_OLD
   fi
-
-  # chsh over to zsh
-  chsh -s $(which zsh)
 }
 
 post_install () {
@@ -55,14 +52,16 @@ post_install () {
 
   # Install vim plugins
   vim +PluginInstall +qall
+
+  # Un-stow the default packages
+  cd $DIR
+  for package in ${DEFAULT_UNSTOW}; do
+    stow $package
+  done
+
+  # chsh over to zsh
+  chsh -s $(which zsh)
 }
 
 install_stuff
-
-# Un-stow the default packages
-cd $DIR
-for package in ${DEFAULT_UNSTOW}; do
-  stow $package
-done
-
 post_install
