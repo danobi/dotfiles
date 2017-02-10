@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # It looks in ~/.oh-my-zsh/themes/
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dxu"
 
 # Disables the auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
