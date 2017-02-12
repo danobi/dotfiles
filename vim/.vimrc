@@ -27,6 +27,7 @@ Plugin 'wting/rust.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'ervandew/supertab'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -84,7 +85,6 @@ set guioptions-=T         "Hide GUI toolbar
 set laststatus=2          "Airline config: Makes airline show up w/o needing a split
 
 "Remaps
-inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nmap <F4> :TagbarToggle<CR>
@@ -116,15 +116,6 @@ nnoremap <Leader>a :Ack!<Space>
 """-------------------------------------------"""
 """                FUNCTIONS                  """
 """-------------------------------------------"""
-"Use tab to complete words when typing
-function! Tab_Or_Complete()
-  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-    return "\<C-N>"
-  else
-    return "\<Tab>"
-  endif
-endfunction
-
 "Toggles relative and absolute line numbers
 function! Line_Number_Toggle()
   if(&relativenumber == 1)
