@@ -87,6 +87,7 @@ set laststatus=2          "Airline config: Makes airline show up w/o needing a s
 "Remaps
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
+nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nmap <F4> :TagbarToggle<CR>
 nmap <Leader>e <plug>NERDTreeTabsToggle<CR>
 imap jj <Esc>
@@ -123,6 +124,11 @@ function! Line_Number_Toggle()
   else
     set relativenumber
   endif
+endfunction
+
+"Strips trailing whitespace from every line
+function! Strip_Trailing_Whitespace()
+  %s/\s\+$//e
 endfunction
 
 """-------------------------------------------"""
