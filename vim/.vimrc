@@ -112,7 +112,7 @@ noremap Y y$
 inoremap <C-e> <C-o>$
 nnoremap <Leader>a :Ack!<Space>
 ""Get rid of comment on new line
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o    
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """-------------------------------------------"""
 """                FUNCTIONS                  """
