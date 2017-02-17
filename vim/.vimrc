@@ -87,6 +87,7 @@ set laststatus=2          "Airline config: Makes airline show up w/o needing a s
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>e <plug>NERDTreeTabsToggle<CR>
+nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nnoremap <Leader>m <C-w>\|
@@ -129,6 +130,15 @@ endfunction
 "Strips trailing whitespace from every line
 function! Strip_Trailing_Whitespace()
   %s/\s\+$//e
+endfunction
+
+"Toggles foldcolumn (useful for seeing where folds are)
+function! Toggle_Foldcolumn()
+  if &foldcolumn
+    setlocal foldcolumn=0
+  else
+    setlocal foldcolumn=2
+  endif
 endfunction
 
 """-------------------------------------------"""
