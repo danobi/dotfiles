@@ -106,7 +106,7 @@ nmap <Leader>w :w<CR>
 nmap <Leader>j :join<CR>
 nmap <Leader>m <C-w>\|
 nmap <Leader>= <C-w>=
-nmap <Space> /
+nnoremap <Space> za
 noremap Y y$
 inoremap <C-e> <C-o>$
 nnoremap <Leader>a :Ack!<Space>
