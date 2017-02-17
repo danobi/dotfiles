@@ -85,32 +85,32 @@ set guioptions-=T         "Hide GUI toolbar
 set laststatus=2          "Airline config: Makes airline show up w/o needing a split
 
 "Remaps
-nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>e <plug>NERDTreeTabsToggle<CR>
+nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
+nnoremap <Leader>m <C-w>\|
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
-nmap <F4> :TagbarToggle<CR>
-nmap <Leader>e <plug>NERDTreeTabsToggle<CR>
-imap jj <Esc>
-nmap <C-n> :tabn<CR>
-nmap <C-p> :tabp<CR>
+nnoremap <Leader>t :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>= <C-w>=
+nnoremap <F4> :TagbarToggle<CR>
+nnoremap <C-n> :tabn<CR>
+nnoremap <C-p> :tabp<CR>
 nnoremap j gj
 nnoremap k gk
-map <C-J> <C-w>j
-map <C-K> <C-w>k
-map <C-H> <C-w>h
-map <C-L> <C-w>l
-nmap J 5j
-nmap K 5k
-xmap J 5j
-xmap K 5k
-nmap <Leader>w :w<CR>
-nmap <Leader>j :join<CR>
-nmap <Leader>m <C-w>\|
-nmap <Leader>= <C-w>=
 nnoremap <Space> za
-noremap Y y$
+nnoremap Y y$
+nnoremap <C-J> <C-w>j
+nnoremap <C-K> <C-w>k
+nnoremap <C-H> <C-w>h
+nnoremap <C-L> <C-w>l
+nnoremap J 5j
+nnoremap K 5k
+inoremap jj <Esc>
 inoremap <C-e> <C-o>$
-nnoremap <Leader>a :Ack!<Space>
+xnoremap J 5j
+xnoremap K 5k
 ""Get rid of comment on new line
 "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
