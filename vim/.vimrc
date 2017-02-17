@@ -120,9 +120,9 @@ xnoremap K 5k
 "Toggles relative and absolute line numbers
 function! Line_Number_Toggle()
   if(&relativenumber == 1)
-    set number norelativenumber
+    setlocal number norelativenumber
   else
-    set relativenumber
+    setlocal relativenumber
   endif
 endfunction
 
