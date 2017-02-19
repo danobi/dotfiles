@@ -47,17 +47,18 @@ install_stuff () {
 }
 
 post_install () {
+  # Un-stow the default packages
+  # This has to go first in this function
+  cd $DIR
+  for package in ${DEFAULT_UNSTOW}; do
+    stow $package
+  done
+
   # Install tmux plugins
   ~/.tmux/plugins/tpm/bin/install_plugins
 
   # Install vim plugins
   vim +PluginInstall +qall
-
-  # Un-stow the default packages
-  cd $DIR
-  for package in ${DEFAULT_UNSTOW}; do
-    stow $package
-  done
 
   # chsh over to zsh
   chsh -s $(which zsh)
