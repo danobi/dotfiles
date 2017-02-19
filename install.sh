@@ -38,7 +38,7 @@ install_stuff () {
   fi
   if [[ ! -d ~/.tmux/plugins/tpm ]]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  fi 
+  fi
 
   # Move the colliding .zshrc so stow doesn't error out
   if [[ -e ~/.zshrc ]]; then
