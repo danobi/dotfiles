@@ -86,7 +86,7 @@ set laststatus=2          "Airline config: Makes airline show up w/o needing a s
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>e <plug>NERDTreeTabsToggle<CR>
+nnoremap <Leader>e :NERDTreeTabsToggle<CR>
 nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
