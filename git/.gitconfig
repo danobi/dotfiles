@@ -1,0 +1,5 @@
+[user]
+	name = Daniel Xu
+	email = dlxu2@yahoo.com
+[core]
+	excludesfile = ~/.gitconf/gitignore
