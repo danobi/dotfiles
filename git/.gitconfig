@@ -3,3 +3,5 @@
 	email = dlxu2@yahoo.com
 [core]
 	excludesfile = ~/.gitconf/gitignore
+[push]
+	default = simple
