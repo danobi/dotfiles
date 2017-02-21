@@ -42,6 +42,9 @@ install_stuff () {
 
   # Move the colliding .zshrc so stow doesn't error out
   if [[ -e ~/.zshrc ]]; then
+    if [[ -e ~/.zshrc_OLD ]]; then
+      rm ~/.zshrc_OLD
+    fi
     mv ~/.zshrc ~/.zshrc_OLD
   fi
 }
