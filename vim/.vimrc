@@ -170,4 +170,4 @@ endif
 cnoreabbrev Ack Ack!
 
 "Make vim-gutentags tags file '.tags'
-let g:gutentags_tagfile=".tags"
+let g:gutentags_ctags_tagfile =".tags"
