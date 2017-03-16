@@ -41,6 +41,7 @@ alias cl="clear && ls"
 alias o="xdg-open"
 alias calc='bc -l'
 alias se='sudoedit'
+alias f='find . -name'
 
 # Git stuff
 alias gdh="gd HEAD"
