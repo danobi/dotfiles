@@ -96,7 +96,7 @@ nnoremap <Leader>m <C-w>\|
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>b :BuffergatorOpen<CR>
+nnoremap <Leader>b :BuffergatorToggle<CR>
 nnoremap <Leader>= <C-w>=
 nnoremap gb :BuffergatorMruCyclePrev<CR>
 nnoremap <F4> :TagbarToggle<CR>
@@ -178,3 +178,5 @@ let g:gutentags_ctags_tagfile = ".tags"
 
 "Don't let buffergator override my keymaps
 let g:buffergator_suppress_keymaps = 1
+"Let's us only jump back and forth between the two MRU buffers
+let g:buffergator_mru_cycle_loop = 1
