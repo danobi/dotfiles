@@ -174,7 +174,7 @@ endif
 cnoreabbrev Ack Ack!
 
 "Make vim-gutentags tags file '.tags'
-let g:gutentags_ctags_tagfile =".tags"
+let g:gutentags_ctags_tagfile = ".tags"
 
 "Don't let buffergator override my keymaps
 let g:buffergator_suppress_keymaps = 1
