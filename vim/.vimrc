@@ -28,6 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -95,10 +96,12 @@ nnoremap <Leader>m <C-w>\|
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>b :BuffergatorOpen<CR>
 nnoremap <Leader>= <C-w>=
+nnoremap gb :BuffergatorMruCyclePrev<CR>
 nnoremap <F4> :TagbarToggle<CR>
-nnoremap <C-n> :tabn<CR>
-nnoremap <C-p> :tabp<CR>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <Space> za
@@ -172,3 +175,6 @@ cnoreabbrev Ack Ack!
 
 "Make vim-gutentags tags file '.tags'
 let g:gutentags_ctags_tagfile =".tags"
+
+"Don't let buffergator override my keymaps
+let g:buffergator_suppress_keymaps = 1
