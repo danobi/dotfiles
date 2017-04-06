@@ -97,6 +97,8 @@ nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :BuffergatorToggle<CR>
+"Open definition in vertical split
+nnoremap <Leader>d :vsp <CR>:exec("tag ".expand("<cword>"))<CR>")")
 nnoremap <Leader>= <C-w>=
 nnoremap gb :BuffergatorMruCyclePrev<CR>
 nnoremap <F4> :TagbarToggle<CR>
