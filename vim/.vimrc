@@ -49,12 +49,12 @@ endif
 
 "Turn terminal color on
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
-    set t_Co=256
+  set t_Co=256
 endif
 
 "tmux configs
 if (exists('$TMUX'))
-    set t_Co=256
+  set t_Co=256
 endif
 
 """-------------------------------------------"""
