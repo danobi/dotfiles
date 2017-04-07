@@ -184,3 +184,4 @@ let g:gutentags_ctags_tagfile = ".tags"
 let g:buffergator_suppress_keymaps = 1
 "Let's us only jump back and forth between the two MRU buffers
 let g:buffergator_mru_cycle_loop = 1
+let g:buffergator_sort_regime = "basename"
