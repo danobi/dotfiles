@@ -46,3 +46,4 @@ alias r='ranger'
 
 # Git stuff
 alias gdh="gd HEAD"
+alias gmf="git merge --ff-only"
