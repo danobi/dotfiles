@@ -29,6 +29,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'bling/vim-bufferline'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -185,3 +186,8 @@ let g:buffergator_suppress_keymaps = 1
 "Let's us only jump back and forth between the two MRU buffers
 let g:buffergator_mru_cycle_loop = 1
 let g:buffergator_sort_regime = "basename"
+
+"Don't show buffer numbers in statusline
+let g:bufferline_show_bufnr = 0
+"Disable buffers echoing into the command line
+let g:bufferline_echo = 0
