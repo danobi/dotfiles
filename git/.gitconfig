@@ -5,3 +5,9 @@
 	excludesfile = ~/.gitconf/gitignore
 [push]
 	default = simple
+[sendemail]
+	smtpuser = dxu@dxuuu.xyz
+	smtpserver = smtp.fastmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	confirm = auto
