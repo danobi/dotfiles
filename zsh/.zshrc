@@ -38,7 +38,7 @@ alias ls='ls --color=auto'
 alias e='exit'
 alias tmux="TERM=screen-256color tmux"
 alias cl="clear && ls"
-alias o="xdg-open"
+alias o="gio open"
 alias calc='bc -l'
 alias se='sudoedit'
 alias f='find . -name'
