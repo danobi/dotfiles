@@ -43,6 +43,7 @@ alias calc='bc -l'
 alias se='sudoedit'
 alias f='find . -name'
 alias r='ranger'
+alias vimd='vim -d'
 
 # Git stuff
 alias gdh="gd HEAD"
