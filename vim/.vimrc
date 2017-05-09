@@ -58,13 +58,19 @@ if (exists('$TMUX'))
   set t_Co=256
 endif
 
+"If we're in diff mode, use a diff friendly colorscheme
+if &diff
+  colorscheme ron
+else
+  colorscheme itg_flat
+endif
+
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
 """-------------------------------------------"""
 
 "Built in settings
 syntax on
-colorscheme itg_flat
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
 set nu
 set ruler                 "Always shows info on bottom
