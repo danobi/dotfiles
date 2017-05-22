@@ -92,6 +92,7 @@ set backspace=indent,eol,start  "More powerful backspace
 set guioptions-=T         "Hide GUI toolbar
 set laststatus=2          "Airline config: Makes airline show up w/o needing a split
 set wildmenu              "Popup filelist on tab completion
+set hlsearch              "Highlight search terms
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
