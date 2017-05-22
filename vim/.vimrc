@@ -30,6 +30,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'bling/vim-bufferline'
+Plugin 'vivien/vim-linux-coding-style'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -197,3 +198,5 @@ let g:buffergator_sort_regime = "basename"
 let g:bufferline_show_bufnr = 0
 "Disable buffers echoing into the command line
 let g:bufferline_echo = 0
+"Only use linux kernel coding style on certain directories
+let g:linuxsty_patterns = [ "/home/dxu/dev/linux", "/home/dxu/dev/eudyptula-challenge" ]
