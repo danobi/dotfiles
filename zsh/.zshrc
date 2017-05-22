@@ -13,7 +13,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git dirhistory sudo autojump colored-man-pages)
 
 # User configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:~/.local/bin:/opt/ctags/bin:/home/daniel/.local/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/opt/ctags/bin:/home/daniel/.local/bin:/home/dxu/.local/bin"
 export TERM=screen-256color
 source $ZSH/oh-my-zsh.sh
 
