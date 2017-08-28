@@ -172,6 +172,9 @@ set fillchars+=stl:\ ,stlnc:\
 "Fix boxes in NERDTREE
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+"get rid of J & K bindings for Nerdtree b/c they conflict with my bindings
+let g:NERDTreeMapJumpFirstChild = ""
+let g:NERDTreeMapJumpLastChild = ""
 
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
