@@ -28,7 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
-Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
 
 "All of your Plugins must be added before the following line
@@ -194,7 +194,7 @@ let g:gutentags_ctags_tagfile = ".tags"
 "Don't let buffergator override my keymaps
 let g:buffergator_suppress_keymaps = 1
 "Let's us only jump back and forth between the two MRU buffers
-let g:buffergator_mru_cycle_loop = 1
+let g:buffergator_mru_cycle_loop_last_two = 1
 let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
