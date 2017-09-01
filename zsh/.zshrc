@@ -24,7 +24,7 @@ export GROFF_NO_SGR=1
 setopt HIST_IGNORE_DUPS
 
 # Makes `sudoedit` work
-export EDITOR="/usr/bin/env vim"
+export EDITOR="vim"
 
 # Aliases
 alias mv='mv -i'
