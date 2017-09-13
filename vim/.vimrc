@@ -93,6 +93,8 @@ set guioptions-=T         "Hide GUI toolbar
 set laststatus=2          "Airline config: Makes airline show up w/o needing a split
 set wildmenu              "Popup filelist on tab completion
 set hlsearch              "Highlight search terms
+set splitbelow            "Split new horizontal splits below
+set splitright            "Split new vertical splits to the right
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
