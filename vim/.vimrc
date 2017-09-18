@@ -88,7 +88,6 @@ set ignorecase            "Ignores case in searches
 set smartcase             "Case sensitive if search starts with uppercase
 set incsearch             "Incremental search
 set showmatch             "Highlight matching bracket
-set ts=2                  "Sets a tab to be 2 spaces
 set shiftwidth=2          "Makes the >> width 2
 set softtabstop=2         "Number of insert mode columns for a tab when tab is hit"
 set expandtab             "Spaces instead of tabs
