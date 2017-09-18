@@ -65,12 +65,16 @@ else
   colorscheme itg_flat
 endif
 
+"Prevents syntax highlighting clobbering
+if !exists("g:syntax_on")
+  syntax enable
+endif
+
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
 """-------------------------------------------"""
 
 "Built in settings
-syntax on
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
 set nu
 set ruler                 "Always shows info on bottom
