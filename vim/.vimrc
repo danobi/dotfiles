@@ -76,6 +76,7 @@ endif
 
 "Built in settings
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
+syntax off                "Turn off syntax hl as part of usability experiment
 set nu
 set ruler                 "Always shows info on bottom
 set cursorline            "Highlight current line
