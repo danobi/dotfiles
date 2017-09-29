@@ -17,7 +17,6 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
-Plugin 'vim-airline/vim-airline'
 Plugin 'szw/vim-tags'
 Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
@@ -169,11 +168,6 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-"Add git to statusline
-set statusline+=%{fugitive#statusline()}
-"Remove ^^^^'s in statusline
-set fillchars+=stl:\ ,stlnc:\
 
 "Fix boxes in NERDTREE
 let g:NERDTreeDirArrowExpandable="+"
