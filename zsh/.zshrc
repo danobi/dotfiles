@@ -44,6 +44,7 @@ alias se='sudoedit'
 alias f='find . -name'
 alias r='ranger'
 alias vimd='vim -d'
+alias cds='clipd -p | xclip -sel c'
 
 # Git stuff
 alias gdh="gd HEAD"
