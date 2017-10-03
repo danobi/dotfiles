@@ -26,6 +26,9 @@ setopt HIST_IGNORE_DUPS
 # Makes `sudoedit` work
 export EDITOR="vim"
 
+# Source dt wrapper script
+source ~/dev/dt/dt.sh
+
 # Aliases
 alias mv='mv -i'
 alias cp='cp -i'
