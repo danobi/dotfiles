@@ -105,7 +105,6 @@ nnoremap <Leader>e :NERDTreeTabsToggle<CR>
 nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
-nnoremap <Leader>m <C-w>\|
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nnoremap <Leader>t :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
