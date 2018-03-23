@@ -3,8 +3,8 @@
 set -e
 
 DIR=~/dotfiles/   # dotfiles repo -- the repo *HAS* to be cloned into the home directory
-DEFAULT_UNSTOW="vim zsh tmux git oh-my-zsh"
-DEFAULT_PKGS="zsh vim tmux git stow ctags"
+DEFAULT_UNSTOW="vim zsh tmux git oh-my-zsh nvim"
+DEFAULT_PKGS="zsh vim tmux git stow ctags neovim"
 
 install_stuff () {
   # Figure out which package manager to use
@@ -29,12 +29,17 @@ install_stuff () {
   # Let's install some packages
   $PKG_MANAGER_CMD $DEFAULT_PKGS
 
+  # Create a nvim config directory so our plugins don't get put into
+  # stow's symlinked dirs
+  mkdir -p ~/.config/nvim/bundle
+
   # Let's clone some specific git repos
   if [[ ! -d ~/.oh-my-zsh/ ]]; then
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh/
   fi
   if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    cp -r ~/.vim/bundle/Vundle.vim ~/.config/nvim/bundle
   fi
   if [[ ! -d ~/.tmux/plugins/tpm ]]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
