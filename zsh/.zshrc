@@ -34,6 +34,9 @@ export EDITOR="vim"
 # Source dt wrapper script
 source ~/dev/dt/dt.sh
 
+# Turn off the ridiculous auto cd feature
+unsetopt AUTO_CD
+
 # Aliases
 alias mv='mv -i'
 alias cp='cp -i'
