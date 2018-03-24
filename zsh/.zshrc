@@ -56,6 +56,7 @@ alias f='find . -name'
 alias r='ranger'
 alias vimd='vim -d'
 alias cds='clipd -p | xclip -sel c'
+alias vim='echo "use nvim" && $(exit 1)'
 
 # Git stuff
 alias gdh="gd HEAD"
