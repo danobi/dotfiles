@@ -13,6 +13,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git dirhistory sudo autojump colored-man-pages)
 
 # User configuration
+export PATH="$HOME/bin:$PATH"
 export PATH="/opt/ctags/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"

@@ -28,6 +28,7 @@ Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
 Plugin 'jlfwong/vim-mercenary'
 Plugin 'google/vim-ft-go'
+Plugin 'szw/vim-tags'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -160,3 +161,6 @@ let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
 let g:linuxsty_patterns = [ "/home/dxu/dev/linux", "/home/dxu/dev/eudyptula-challenge", "/data/users/dlxu/linux", "/home/dlxu/linux-upstream"]
+
+"Don't autogenerate tag file on save
+let g:vim_tags_auto_generate = 0
