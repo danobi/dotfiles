@@ -22,7 +22,6 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
-Plugin 'rust-lang/rust.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
@@ -38,13 +37,6 @@ if has("autocmd")
   filetype on
   filetype indent on
   filetype plugin on
-endif
-
-"Makes window big in gvim
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=60 columns=90
 endif
 
 "Turn terminal color on
@@ -88,8 +80,8 @@ set ignorecase            "Ignores case in searches
 set smartcase             "Case sensitive if search starts with uppercase
 set incsearch             "Incremental search
 set showmatch             "Highlight matching bracket
-set shiftwidth=4          "Makes the >> width 4
-set softtabstop=4         "Number of insert mode columns for a tab when tab is hit"
+set shiftwidth=2          "Makes the >> width 2
+set softtabstop=2         "Number of insert mode columns for a tab when tab is hit"
 set expandtab             "Spaces instead of tabs
 set backspace=indent,eol,start  "More powerful backspace
 set guioptions-=T         "Hide GUI toolbar
@@ -118,7 +110,6 @@ nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap j gj
 nnoremap k gk
-nnoremap <Space> za
 nnoremap Y y$
 nnoremap <C-J> <C-w>j
 nnoremap <C-K> <C-w>k
@@ -130,8 +121,6 @@ inoremap jj <Esc>
 inoremap <C-e> <C-o>$
 xnoremap J 5j
 xnoremap K 5k
-""Get rid of comment on new line
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """-------------------------------------------"""
 """                FUNCTIONS                  """
@@ -197,4 +186,4 @@ let g:buffergator_mru_cycle_loop_last_two = 1
 let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
-let g:linuxsty_patterns = [ "/home/dxu/dev/linux", "/home/dxu/dev/eudyptula-challenge" ]
+let g:linuxsty_patterns = [ "~/dev/linux"]
