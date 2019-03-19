@@ -188,4 +188,4 @@ let g:buffergator_mru_cycle_loop_last_two = 1
 let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
-let g:linuxsty_patterns = [ "~/dev/linux"]
+let g:linuxsty_patterns = [ "/home/daniel/dev/linux" ]
