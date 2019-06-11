@@ -104,6 +104,8 @@ nnoremap <Leader>b :BuffergatorToggle<CR>
 "Open definition in vertical split
 nnoremap <Leader>d :vsp <CR>:exec("tag ".expand("<cword>"))<CR>")")
 nnoremap <Leader>= <C-w>=
+"Toggle paste mode
+nnoremap <leader>p :set paste!<cr>
 nnoremap gb :BuffergatorMruCyclePrev<CR>
 nnoremap <F4> :TagbarToggle<CR>
 nnoremap <C-n> :bn<CR>
