@@ -3,8 +3,8 @@
 set -e
 
 DIR=~/dotfiles/   # dotfiles repo -- the repo *HAS* to be cloned into the home directory
-DEFAULT_UNSTOW="vim zsh tmux git oh-my-zsh nvim"
-DEFAULT_PKGS="zsh vim tmux git stow ctags neovim"
+DEFAULT_UNSTOW="vim zsh tmux git oh-my-zsh nvim alacritty ssh"
+DEFAULT_PKGS="zsh vim tmux git stow ctags"
 
 install_stuff () {
   # Figure out which package manager to use
