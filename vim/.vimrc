@@ -174,8 +174,8 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "Ack.vim config
 "Use Ag instead of Ack when available
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep'
 endif
 "Don't automatically jump to first result
 cnoreabbrev Ack Ack!
