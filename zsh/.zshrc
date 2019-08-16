@@ -38,6 +38,11 @@ source ~/dev/dt/dt.sh
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
 
+# Helper to colorize .diff files
+function cless() {
+  colordiff < "$1" | less
+}
+
 # Aliases
 alias mv='mv -i'
 alias cp='cp -i'
