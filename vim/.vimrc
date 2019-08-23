@@ -28,6 +28,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
 Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
+Plugin 'rust-lang/rust.vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
