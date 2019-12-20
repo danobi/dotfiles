@@ -20,7 +20,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="/bin:$PATH"
-export TERM=screen-256color
 source $ZSH/oh-my-zsh.sh
 
 # This makes the colored-man-pages oh-my-zsh plugin work (no one knows why)
