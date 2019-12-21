@@ -31,9 +31,6 @@ setopt HIST_IGNORE_DUPS
 # Makes `sudoedit` work
 export EDITOR="vim"
 
-# Source dt wrapper script
-source ~/dev/dt/dt.sh
-
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
 
