@@ -35,8 +35,7 @@ export EDITOR="vim"
 unsetopt AUTO_CD
 
 # Zephyr toolchain config
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=~/dev/zephyrsdk/zephyr-sdk-0.11.2
+[[ -f "$HOME/.zephyrrc" ]] && source ~/.zephyrrc
 
 # Helper to colorize .diff files
 function cless() {
