@@ -34,6 +34,10 @@ export EDITOR="vim"
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
 
+# Zephyr toolchain config
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/dev/zephyrsdk/zephyr-sdk-0.11.2
+
 # Helper to colorize .diff files
 function cless() {
   colordiff < "$1" | less
