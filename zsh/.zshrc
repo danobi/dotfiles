@@ -68,6 +68,18 @@ ix() {
     curl $opts -F f:1='<-' $* ix.io/$id
 }
 
+# github PR helper
+ghpr() {
+    if [[ -z "$1" || -z "$2" ]]; then
+        echo "Usage: ghpr PR_NUM BRANCH_NAME"
+        return 1
+    fi;
+
+    local target_branch="pr_${2}"
+    git fetch upstream "pull/${1}/head:${target_branch}" || return 1
+    echo "Fetched PR #${1} to ${target_branch}"
+}
+
 # Aliases
 alias mv='mv -i'
 alias cp='cp -i'
