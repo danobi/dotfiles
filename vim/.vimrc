@@ -192,3 +192,6 @@ let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
 let g:linuxsty_patterns = [ "/home/daniel/dev/linux" ]
+
+"Autofocus tagbar when it's opened
+let g:tagbar_autofocus = 1
