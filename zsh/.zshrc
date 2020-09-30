@@ -10,7 +10,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git dirhistory sudo colored-man-pages)
+plugins=(dirhistory sudo colored-man-pages)
 
 # User configuration
 export PATH="$HOME/bin:$PATH"
@@ -103,3 +103,5 @@ alias cds='clipd -p | xclip -sel c'
 # Git stuff
 alias gdh="gd HEAD"
 alias gmf="git merge --ff-only"
+alias gr="git rebase"
+alias gri="git rebase -i"
