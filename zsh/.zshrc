@@ -101,7 +101,9 @@ alias vimd='vim -d'
 alias cds='clipd -p | xclip -sel c'
 
 # Git stuff
-alias gdh="gd HEAD"
+alias gc="git commit"
+alias gd="git diff"
+alias gdh="git diff HEAD"
 alias gmf="git merge --ff-only"
 alias gr="git rebase"
 alias gri="git rebase -i"
