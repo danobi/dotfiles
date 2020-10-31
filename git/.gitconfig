@@ -3,8 +3,14 @@
 	email = dxu@dxuuu.xyz
 [core]
 	excludesfile = ~/.gitconf/gitignore
+[alias]
+	fixes = show -s --pretty='format:%h (\"%s\")\n'
 [push]
 	default = simple
+[format]
+	coverletter = auto
+	signoff = true
+	thread = shallow
 [sendemail]
 	smtpuser = dxu@dxuuu.xyz
 	smtpserver = smtp.fastmail.com
