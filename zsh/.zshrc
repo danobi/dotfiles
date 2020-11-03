@@ -13,6 +13,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(dirhistory sudo colored-man-pages)
 
 # User configuration
+export PATH="$HOME/dev/btrfs-workflow/scripts"
 export PATH="$HOME/bin:$PATH"
 export PATH="/opt/ctags/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
