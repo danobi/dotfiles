@@ -103,6 +103,7 @@ alias vimd='vim -d'
 alias cds='clipd -p | xclip -sel c'
 
 # Git stuff
+alias gb="git branch"
 alias gc="git commit"
 alias gd="git diff"
 alias gdh="git diff HEAD"
