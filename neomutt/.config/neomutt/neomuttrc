@@ -42,6 +42,7 @@ set sort_aux = last-date-received
 set pager_stop = yes
 set pager_index_lines=10
 set index_format = "%Z %[%R:%M %D] %-15.15L %s"
+set save_history = 10000
 
 #
 # Binds
