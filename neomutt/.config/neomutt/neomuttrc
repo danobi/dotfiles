@@ -80,6 +80,8 @@ color   quoted  cyan            black
 color   index   brightcolor154  default         "~U"
 # Unread, unreferenced messages
 color   index   brightcolor154  default         "~U~$"
+# Message is part of collapsed thread
+color   index   blue            default         "~v"
 # Patch syntax highlighting
 color   normal  white           default
 color   body    brightwhite     default         ^[[:space:]].*
