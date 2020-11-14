@@ -1,0 +1,82 @@
+#
+# Basic
+#
+set realname = "Daniel Xu"
+set from = "Daniel Xu <dxu@dxuuu.xyz>"
+
+#
+# Accounts
+#
+source ~/.config/neomutt/secret
+set folder = imaps://imap.fastmail.com:993
+set imap_user = "dxu@dxuuu.xyz"
+set smtp_url = "smtps://dxu@dxuuu.xyz@smtp.fastmail.com:465"
+set smtp_pass = $imap_pass
+set smtp_authenticators = "plain"
+set ssl_force_tls = yes
+set ssl_starttls = no
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+
+#
+# Folders
+#
+mailboxes "+INBOX"
+named-mailboxes aerc "+lists/aerc"
+named-mailboxes bpftrace "+lists/bpftrace"
+named-mailboxes bpftrace-ment "+lists/bpftrace/bpftrace-ment"
+named-mailboxes bpf "+lists/linux-kernel/bpf"
+named-mailboxes btrfs "+lists/linux-kernel/btrfs"
+named-mailboxes btrfs-ment "+lists/linux-kernel/btrfs/btrfs-ment"
+named-mailboxes cgroups "+lists/linux-kernel/cgroups"
+named-mailboxes io-uring "+lists/linux-kernel/io-uring"
+
+#
+# General
+#
+set header_cache = "~/.neomutt/headercache"
+set sidebar_visible = yes
+set sort = threads
+set sort_aux = last-date-received
+set pager_stop = yes
+set pager_index_lines=10
+set index_format = "%Z %[%R:%M %D] %-15.15L %s"
+
+#
+# Binds
+#
+# Moving around
+bind attach,browser,index         g   noop
+bind attach,browser,index         gg  first-entry
+bind attach,browser,index         G   last-entry
+bind pager                        g   noop
+bind pager                        gg  top
+bind pager                        G   bottom
+bind pager                        k   previous-line
+bind pager                        j   next-line
+bind index,pager                  \Cj sidebar-next
+bind index,pager                  \Ck sidebar-prev
+bind index,pager                  \Co sidebar-open
+# Scrolling
+bind attach,browser,pager,index   \CF next-page
+bind attach,browser,pager,index   \CB previous-page
+bind attach,browser,pager,index   \Cu half-up
+bind attach,browser,pager,index   \Cd half-down
+bind browser,pager                \Ce next-line
+bind browser,pager                \Cy previous-line
+bind index                        \Ce next-line
+bind index                        \Cy previous-line
+bind pager,index                  d   half-down
+bind pager,index                  u   half-up
+# Threads
+bind browser,pager,index          N   search-opposite
+
+#
+# Colors
+#
+color quoted cyan black
+# Unread messages
+color index brightcolor154 default "~U"
+# Unread, unreferenced messages
+color index brightcolor154 default "~U~$"
