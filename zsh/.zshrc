@@ -39,11 +39,6 @@ unsetopt AUTO_CD
 # Zephyr toolchain config
 [[ -f "$HOME/.zephyrrc" ]] && source ~/.zephyrrc
 
-# Helper to colorize .diff files
-function cless() {
-  colordiff < "$1" | less
-}
-
 # ix.io helper
 ix() {
     local opts
