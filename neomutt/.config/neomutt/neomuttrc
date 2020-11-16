@@ -82,8 +82,8 @@ macro pager,index                 p   "<pipe-message>cless<enter>"
 #
 color   quoted  cyan            black
 # Unread messages
-color   index   brightcolor154  default         "~U"
+color   index   green           default         "~U"
 # Unread, unreferenced messages
-color   index   brightcolor154  default         "~U~$"
+color   index   green           default         "~U~$"
 # Message is part of collapsed thread
 color   index   blue            default         "~v"
