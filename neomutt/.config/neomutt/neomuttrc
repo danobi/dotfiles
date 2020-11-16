@@ -70,8 +70,6 @@ bind index                        \Ce next-line
 bind index                        \Cy previous-line
 bind pager,index                  d   half-down
 bind pager,index                  u   half-up
-# Threads
-bind browser,pager,index          N   search-opposite
 
 #
 # Colors
