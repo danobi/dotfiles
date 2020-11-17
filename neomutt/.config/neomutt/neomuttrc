@@ -78,6 +78,7 @@ bind pager,index                  u   half-up
 bind index                        za  collapse-thread
 # Git workflow
 macro pager,index                 p   "<pipe-message>cless<enter>"
+bind index,pager                  r   group-reply
 
 #
 # Colors
