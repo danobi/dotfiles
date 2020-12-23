@@ -17,3 +17,5 @@
 	smtpserverport = 587
 	smtpencryption = tls
 	confirm = auto
+[pull]
+	ff = only
