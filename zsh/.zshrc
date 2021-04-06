@@ -23,6 +23,7 @@ export PATH="/usr/bin:$PATH"
 export PATH="/bin:$PATH"
 export PATH="$HOME/dev/btrfs-workflow/scripts:$PATH"
 source $ZSH/oh-my-zsh.sh
+export MAKEFLAGS="--no-print-directory"
 
 # This makes the colored-man-pages oh-my-zsh plugin work (no one knows why)
 export GROFF_NO_SGR=1
