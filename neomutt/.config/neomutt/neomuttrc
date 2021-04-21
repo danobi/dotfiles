@@ -31,6 +31,7 @@ named-mailboxes btrfs "+lists/linux-kernel/btrfs"
 named-mailboxes btrfs-ment "+lists/linux-kernel/btrfs/btrfs-ment"
 named-mailboxes cgroups "+lists/linux-kernel/cgroups"
 named-mailboxes io-uring "+lists/linux-kernel/io-uring"
+named-mailboxes rust-for-linux "+lists/linux-kernel/rust-for-linux"
 
 #
 # General
