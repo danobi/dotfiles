@@ -204,7 +204,7 @@ let g:buffergator_mru_cycle_loop_last_two = 1
 let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
-let g:linuxsty_patterns = [ "/home/daniel/dev/linux" ]
+let g:linuxsty_patterns = [ "/home/dxu/dev/linux" ]
 
 "Autofocus tagbar when it's opened
 let g:tagbar_autofocus = 1
