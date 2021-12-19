@@ -182,6 +182,8 @@ let g:NERDTreeMapJumpFirstChild = ""
 let g:NERDTreeMapJumpLastChild = ""
 "Fix ^G prefix on everything
 let g:NERDTreeNodeDelimiter = "\u00a0"
+"Show hidden files and directories
+let g:NERDTreeShowHidden=1
 
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
