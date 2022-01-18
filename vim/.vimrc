@@ -104,6 +104,7 @@ set wildmenu              "Popup filelist on tab completion
 set hlsearch              "Highlight search terms
 set splitbelow            "Split new horizontal splits below
 set splitright            "Split new vertical splits to the right
+set noswapfile            "Disable .swp files
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
