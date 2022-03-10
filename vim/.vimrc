@@ -22,7 +22,7 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
 Plugin 'mileszs/ack.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
@@ -113,7 +113,7 @@ nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
-nnoremap <Leader>t :CtrlPMixed<CR>
+nnoremap <Leader>t :FZF<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :BuffergatorToggle<CR>
 "Open definition in vertical split
