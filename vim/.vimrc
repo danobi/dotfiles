@@ -63,6 +63,8 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
+autocmd BufNewFile,BufRead *.prr syntax on
+
 "Automatically decode and encode files ending in `.bin` with xxd
 augroup Binary
   au!
