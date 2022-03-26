@@ -63,7 +63,7 @@ if !exists("g:syntax_on")
   syntax enable
 endif
 
-autocmd BufNewFile,BufRead *.prr syntax on
+autocmd BufNewFile,BufRead *.prr set syntax=ON
 
 "Automatically decode and encode files ending in `.bin` with xxd
 augroup Binary
@@ -83,7 +83,7 @@ augroup END
 
 "Built in settings
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
-syntax off                "Turn off syntax hl as part of usability experiment
+syntax manual             "Turn off syntax hl as part of usability experiment
 set nonu                  "Turn off line numbers; they're kind of useless anyways
 set ruler                 "Always shows info on bottom
 set cursorline            "Highlight current line
