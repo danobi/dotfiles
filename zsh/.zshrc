@@ -69,7 +69,7 @@ ix() {
 # pastes.dxuuu.xyz helper
 pastes() {
   [ -t 0 ] && echo "^C to cancel, ^D to send"
-  curl https://pastes.dxuuu.xyz -d '@-'
+  curl https://pastes.dxuuu.xyz --data-binary '@-'
 }
 
 # github PR helper
