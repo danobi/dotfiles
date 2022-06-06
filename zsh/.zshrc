@@ -66,6 +66,12 @@ ix() {
     curl $opts -F f:1='<-' $* ix.io/$id
 }
 
+# pastes.dxuuu.xyz helper
+pastes() {
+  [ -t 0 ] && echo "^C to cancel, ^D to send"
+  curl https://pastes.dxuuu.xyz -d '@-'
+}
+
 # github PR helper
 ghpr() {
     if [[ -z "$1" || -z "$2" ]]; then
