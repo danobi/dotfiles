@@ -83,7 +83,7 @@ augroup END
 
 "Built in settings
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
-syntax manual             "Turn off syntax hl as part of usability experiment
+syntax off
 set nonu                  "Turn off line numbers; they're kind of useless anyways
 set ruler                 "Always shows info on bottom
 set cursorline            "Highlight current line
