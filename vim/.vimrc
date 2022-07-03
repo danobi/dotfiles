@@ -30,6 +30,7 @@ Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
 Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'prabirshrestha/vim-lsp'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -213,3 +214,16 @@ let g:linuxsty_patterns = [ "/home/dxu/dev/linux" ]
 
 "Autofocus tagbar when it's opened
 let g:tagbar_autofocus = 1
+
+"Rust-analyzer LSP config
+if executable('rust-analyzer')
+  au User lsp_setup call lsp#register_server({
+        \   'name': 'Rust Language Server',
+        \   'cmd': {server_info->['rust-analyzer']},
+        \   'whitelist': ['rust'],
+        \ })
+  nnoremap <Leader>d :vsp <CR>:LspDefinition<CR>
+endif
+"Disable diagnostics support
+let g:lsp_diagnostics_signs_enabled = 0
+let g:lsp_document_code_action_signs_enabled = 0
