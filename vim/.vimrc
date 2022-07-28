@@ -222,7 +222,6 @@ if executable('rust-analyzer')
         \   'cmd': {server_info->['rust-analyzer']},
         \   'whitelist': ['rust'],
         \ })
-  nnoremap <Leader>d :vsp <CR>:LspDefinition<CR>
 endif
 "Disable diagnostics support
 let g:lsp_diagnostics_signs_enabled = 0
