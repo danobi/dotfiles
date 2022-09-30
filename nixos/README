@@ -1,0 +1,2 @@
+Note: these are not dotfiles. These files need to be copied
+to /etc/nixos/... on a target nixos host.
