@@ -36,31 +36,46 @@ in
     };
   };
 
-  services.tailscale.enable = true;
-  services.openssh = {
-    enable = true;
-    passwordAuthentication = false;
-  };
-  services.unifi = {
-    enable = true;
-    openFirewall = true;
-    unifiPackage = pkgs.unifi7;
+  services = {
+    tailscale.enable = true;
+    openssh = {
+      enable = true;
+      passwordAuthentication = false;
+    };
+    unifi = {
+      enable = true;
+      openFirewall = true;
+      unifiPackage = pkgs.unifi7;
+    };
+    adguardhome = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 
   networking = {
     hostName = "chhota";
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 8443 ];
+      allowedTCPPorts = [
+        # For unifi controller
+        8443
+        # For adguardhome to serve dns
+        53
+        # For adguardhome's web console
+        80
+      ];
+      allowedUDPPorts = [
+        # For adguardhome to serve dns
+        53
+      ];
       checkReversePath = "loose";
     };
   };
 
   # Enable GPU acceleration
   hardware.raspberry-pi."4".fkms-3d.enable = true;
-
   hardware.pulseaudio.enable = true;
-
   # Allow proprietary packages
   nixpkgs.config.allowUnfree = true;
 }
