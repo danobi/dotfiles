@@ -20,6 +20,7 @@ in
   environment.systemPackages = with pkgs; [
     vim
     tailscale
+    tmux
     unifi7
   ];
 
