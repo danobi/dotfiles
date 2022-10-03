@@ -63,8 +63,6 @@ in
         8443
         # For adguardhome to serve dns
         53
-        # For adguardhome's web console
-        80
       ];
       allowedUDPPorts = [
         # For adguardhome to serve dns
