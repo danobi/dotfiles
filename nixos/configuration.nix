@@ -18,10 +18,9 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    vim
-    tailscale
+    sshfs
     tmux
-    unifi7
+    vim
   ];
 
   users = {
