@@ -33,6 +33,7 @@ in
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDdIky9I/pYmBYzh/CVhEjxURYvLJskJq0s8lF4xtza5 dxu@dxuuu.xyz"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ/r30nqllTmi12ztwxiUSo9IdGfxIuDuoXXovCuoep2 dxu@aviatrix.com"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN0Cu4NxH9B/1r3clSBC7oO2Uq6MNt6z8YaRDa3vQczL dxu@dxuuu.xyz"
       ];
     };
   };
