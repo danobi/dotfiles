@@ -52,6 +52,12 @@ in
       enable = true;
       openFirewall = true;
     };
+    jellyfin = {
+      enable = true;
+      openFirewall = true;
+      user = "${secrets.user}";
+      group = "users";
+    };
   };
 
   networking = {
