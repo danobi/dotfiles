@@ -78,6 +78,11 @@ in
     };
   };
 
+  boot.kernel.sysctl = {
+    # Allow ipv4 forwarding so host can be used as a tailscale exit node
+    "net.ipv4.conf.all.forwarding" = true;
+  };
+
   # Enable GPU acceleration
   hardware.raspberry-pi."4".fkms-3d.enable = true;
   hardware.pulseaudio.enable = true;
