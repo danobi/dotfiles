@@ -13,15 +13,9 @@ DISABLE_AUTO_TITLE="true"
 plugins=(dirhistory sudo colored-man-pages)
 
 # User configuration
-export PATH="$HOME/dev/btrfs-workflow/scripts"
 export PATH="$HOME/bin:$PATH"
-export PATH="/opt/ctags/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/bin:$PATH"
-export PATH="/bin:$PATH"
-export PATH="$HOME/dev/btrfs-workflow/scripts:$PATH"
 source $ZSH/oh-my-zsh.sh
 export MAKEFLAGS="--no-print-directory"
 
