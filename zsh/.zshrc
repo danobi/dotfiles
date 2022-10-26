@@ -31,9 +31,6 @@ export EDITOR="vim"
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
 
-# Zephyr toolchain config
-[[ -f "$HOME/.zephyrrc" ]] && source ~/.zephyrrc
-
 # pastes.dxuuu.xyz helper
 pastes() {
   [ -t 0 ] && echo "^C to cancel, ^D to send"
