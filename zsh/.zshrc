@@ -54,13 +54,6 @@ ghpr() {
     echo "Fetched PR #${1} to ${target_branch}"
 }
 
-# Linux kernel Tested-by tag
-testedby() {
-  printf "Tested-by: %s <%s>\n"     \
-    "$(git config --get user.name)" \
-    "$(git config --get user.email)"
-}
-
 # Aliases
 alias mv='mv -i'
 alias cp='cp -i'
