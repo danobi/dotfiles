@@ -65,21 +65,13 @@ testedby() {
 alias mv='mv -i'
 alias cp='cp -i'
 alias la='ls -a'
-alias c='clear'
 alias sdi='sudo dnf install'
 alias sag='sudo apt-get install'
 alias pacs='sudo pacman -S'
 alias ls='ls --color=auto'
 alias e='exit'
 alias tmux="TERM=screen-256color tmux"
-alias cl="clear && ls"
 alias o="gio open"
-alias calc='bc -l'
-alias se='sudoedit'
-alias f='find . -name'
-alias r='ranger'
-alias vimd='vim -d'
-alias cds='clipd -p | xclip -sel c'
 
 # Git stuff
 alias gb="git branch"
@@ -89,7 +81,6 @@ alias gdh="git diff HEAD"
 alias gmf="git merge --ff-only"
 alias gr="git rebase"
 alias gri="git rebase -i"
-alias grc="git rebase --continue"
 alias gco="git checkout"
 alias gst="git status"
 alias ga="git add"
