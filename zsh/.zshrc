@@ -44,8 +44,13 @@ ghpr() {
         return 1
     fi;
 
+    local remote=upstream
+    if ! git remote get-url upstream &> /dev/null; then
+      remote=origin
+    fi
+
     local target_branch="pr_${2}"
-    git fetch upstream "pull/${1}/head:${target_branch}" || return 1
+    git fetch "$remote" "pull/${1}/head:${target_branch}" || return 1
     echo "Fetched PR #${1} to ${target_branch}"
 }
 
