@@ -21,5 +21,8 @@
 	smtpserverport = 587
 	smtpencryption = tls
 	confirm = auto
+	suppresscc = self
+	tocmd = "$(git rev-parse --show-toplevel)/scripts/get_maintainer.pl --nogit --nogit-fallback --norolestats --nol"
+	cccmd = "$(git rev-parse --show-toplevel)/scripts/get_maintainer.pl --nogit --nogit-fallback --norolestats --nom"
 [pull]
 	ff = only
