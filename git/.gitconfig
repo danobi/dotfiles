@@ -6,7 +6,7 @@
 [alias]
 	fixes = show -s --pretty='format:%h (\"%s\")\n'
 	testedby = "!printf 'Tested-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
-	patchset = "!git format-patch -o $(git rev-parse --show-toplevel)/outgoing/$(git rev-parse --abbrev-ref HEAD)"
+	patchset = "!git format-patch -o $(git rev-parse --show-toplevel)/outgoing/$(git rev-parse --abbrev-ref HEAD) -s"
 [push]
 	default = simple
 [rebase]
