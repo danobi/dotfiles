@@ -17,14 +17,12 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
-Plugin 'szw/vim-tags'
 Plugin 'justinmk/vim-sneak'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'junegunn/fzf'
 Plugin 'mileszs/ack.vim'
-Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ervandew/supertab'
 Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
@@ -119,7 +117,7 @@ nnoremap <Leader>t :FZF<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>b :BuffergatorToggle<CR>
 "Open definition in vertical split
-nnoremap <Leader>d :vsp <CR>:exec("tag ".expand("<cword>"))<CR>")")
+nnoremap <Leader>d :vsp <CR>:exec(":LspDefinition")<CR>
 nnoremap <Leader>= <C-w>=
 "Toggle paste mode
 nnoremap <leader>p :set paste!<cr>
@@ -198,9 +196,6 @@ if executable('rg')
 endif
 "Don't automatically jump to first result
 cnoreabbrev Ack Ack!
-
-"Make vim-gutentags tags file '.tags'
-let g:gutentags_ctags_tagfile = ".tags"
 
 "Don't let buffergator override my keymaps
 let g:buffergator_suppress_keymaps = 1
