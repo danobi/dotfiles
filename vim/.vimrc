@@ -221,6 +221,14 @@ if executable('rust-analyzer')
         \   'whitelist': ['rust'],
         \ })
 endif
+"Clangd LSP config
+if executable('clangd')
+  au User lsp_setup call lsp#register_server({
+        \   'name': 'clangd',
+        \   'cmd': {server_info->['clangd']},
+        \   'whitelist': ['c'],
+        \ })
+endif
 "Disable diagnostics support
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
