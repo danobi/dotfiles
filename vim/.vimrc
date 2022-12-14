@@ -13,7 +13,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
@@ -108,7 +107,7 @@ set noswapfile            "Disable .swp files
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>e :NERDTreeTabsToggle<CR>
+nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
@@ -184,6 +183,8 @@ let g:NERDTreeMapJumpLastChild = ""
 let g:NERDTreeNodeDelimiter = "\u00a0"
 "Show hidden files and directories
 let g:NERDTreeShowHidden=1
+" Open the existing NERDTree on each tab
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
