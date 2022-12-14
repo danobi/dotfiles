@@ -31,6 +31,7 @@ Plugin 'vivien/vim-linux-coding-style'
 Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -74,12 +75,6 @@ augroup Binary
   au BufWritePre *.bin endif
   au BufWritePost *.bin if &bin | %!xxd
   au BufWritePost *.bin set nomod | endif
-augroup END
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
 """-------------------------------------------"""
@@ -172,10 +167,6 @@ function! Toggle_Foldcolumn()
   endif
 endfunction
 
-function! s:on_lsp_buffer_enabled() abort
-    nnoremap <buffer> <Leader>d <plug>(lsp-definition)
-endfunction
-
 """-------------------------------------------"""
 """              PLUGIN CONFIG                """
 """-------------------------------------------"""
@@ -223,22 +214,6 @@ let g:linuxsty_patterns = [ "/home/dxu/dev/linux" ]
 "Autofocus tagbar when it's opened
 let g:tagbar_autofocus = 1
 
-"Rust-analyzer LSP config
-if executable('rust-analyzer')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'Rust Language Server',
-        \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
-        \ })
-endif
-"Clangd LSP config
-if executable('clangd')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'clangd',
-        \   'cmd': {server_info->['clangd']},
-        \   'whitelist': ['c'],
-        \ })
-endif
 "Disable diagnostics support
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
