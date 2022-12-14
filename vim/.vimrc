@@ -217,3 +217,5 @@ let g:tagbar_autofocus = 1
 "Disable diagnostics support
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
+let g:lsp_document_highlight_enabled = 0
+let g:lsp_diagnostics_enabled = 0
