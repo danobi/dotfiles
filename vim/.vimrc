@@ -76,6 +76,12 @@ augroup Binary
   au BufWritePost *.bin set nomod | endif
 augroup END
 
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
 """-------------------------------------------"""
@@ -164,6 +170,10 @@ function! Toggle_Foldcolumn()
   else
     setlocal foldcolumn=2
   endif
+endfunction
+
+function! s:on_lsp_buffer_enabled() abort
+    nnoremap <buffer> <Leader>d <plug>(lsp-definition)
 endfunction
 
 """-------------------------------------------"""
