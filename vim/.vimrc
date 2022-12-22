@@ -171,17 +171,6 @@ let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
-"Bind ctrlp keybinding to <Leader>t
-let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
-let g:ctrlp_cmd = 'CtrlP'
-
-"Ack.vim config
-"Use Ag instead of Ack when available
-if executable('rg')
-  let g:ackprg = 'rg --vimgrep'
-endif
-"Don't automatically jump to first result
-cnoreabbrev Ack Ack!
 
 "Don't let buffergator override my keymaps
 let g:buffergator_suppress_keymaps = 1
