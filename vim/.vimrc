@@ -12,7 +12,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'scrooloose/nerdtree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
@@ -106,7 +105,7 @@ set noswapfile            "Disable .swp files
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>e :NERDTreeToggle<CR>
+nnoremap <Leader>e :Lexplore<CR>
 nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
@@ -171,19 +170,6 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-"Fix boxes in NERDTREE
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-"get rid of J & K bindings for Nerdtree b/c they conflict with my bindings
-let g:NERDTreeMapJumpFirstChild = ""
-let g:NERDTreeMapJumpLastChild = ""
-"Fix ^G prefix on everything
-let g:NERDTreeNodeDelimiter = "\u00a0"
-"Show hidden files and directories
-let g:NERDTreeShowHidden=1
-" Open the existing NERDTree on each tab
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 "Bind ctrlp keybinding to <Leader>t
 let g:ctrlp_map = '<\-t>'  "This actually doesn't work at all, the real binding is above
