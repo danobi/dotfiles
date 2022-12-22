@@ -21,7 +21,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'junegunn/fzf'
 Plugin 'ervandew/supertab'
-Plugin 'danobi/vim-buffergator'
 Plugin 'vivien/vim-linux-coding-style'
 Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
@@ -112,13 +111,11 @@ nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
 nnoremap <Leader>t :FZF<CR>
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>b :BuffergatorToggle<CR>
 "Open definition in vertical split
 nnoremap <Leader>d :vsp <CR>:exec(":LspDefinition")<CR>
 nnoremap <Leader>= <C-w>=
 "Toggle paste mode
 nnoremap <leader>p :set paste!<cr>
-nnoremap gb :BuffergatorMruCyclePrev<CR>
 nnoremap <F4> :TagbarToggle<CR>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
@@ -170,13 +167,6 @@ let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
-
-
-"Don't let buffergator override my keymaps
-let g:buffergator_suppress_keymaps = 1
-"Let's us only jump back and forth between the two MRU buffers
-let g:buffergator_mru_cycle_loop_last_two = 1
-let g:buffergator_sort_regime = "basename"
 
 "Only use linux kernel coding style on certain directories
 let g:linuxsty_patterns = [ "/home/dxu/dev/linux" ]
