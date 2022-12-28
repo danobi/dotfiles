@@ -167,9 +167,6 @@ let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
-"Only use linux kernel coding style on certain directories
-let g:linuxsty_patterns = [ "/home/dxu/dev/linux" ]
-
 "Autofocus tagbar when it's opened
 let g:tagbar_autofocus = 1
 
