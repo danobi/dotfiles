@@ -16,6 +16,7 @@ plugins=(dirhistory sudo colored-man-pages)
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 export MAKEFLAGS="--no-print-directory"
 
