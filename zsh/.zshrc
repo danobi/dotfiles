@@ -12,6 +12,10 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(dirhistory sudo colored-man-pages)
 
+# Make omz updates less annoying
+zstyle ':omz:update' mode reminder
+zstyle ':omz:update' frequency 30
+
 # User configuration
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
