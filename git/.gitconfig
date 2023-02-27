@@ -4,9 +4,12 @@
 [core]
 	excludesfile = ~/.gitconf/gitignore
 [alias]
+        # Usage: `git fixes $SHA`
 	fixes = show -s --pretty='format:%h (\"%s\")\n'
+        # Usage: `git testedby`
 	testedby = "!printf 'Tested-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
-	patchset = "!git format-patch -o ~/dev/outgoing/linux/$(git rev-parse --abbrev-ref HEAD) -s"
+        # Usage: `git patchset $REF`
+        patchset = "!linux-patchset.sh"
 [push]
 	default = simple
 [rebase]
@@ -22,7 +25,5 @@
 	smtpencryption = tls
 	confirm = auto
 	suppresscc = self
-	tocmd = "$(git rev-parse --show-toplevel)/scripts/get_maintainer.pl --nogit --nogit-fallback --norolestats --nol"
-	cccmd = "$(git rev-parse --show-toplevel)/scripts/get_maintainer.pl --nogit --nogit-fallback --norolestats --nom"
 [pull]
 	ff = only
