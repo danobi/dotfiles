@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eu
+
+# Use passed in rev if provided, HEAD if not
+rev="${1:-HEAD}"
+
+msg=$(git log --format=%B -n 1 "$rev")
+title=$(echo "$msg" | head -1)
+body=$(echo "$msg" | tail -n +2)
+
+echo "+ Creating ticket"
+ticket=$(jira issue create -t Task -s "$title" -b "$body" --fix-version "7.1" --component "TBD/Unknown" --assignee "dxu@aviatrix.com"  --no-input | tail -1 | cut -d / -f 5)
+
+echo "+ Moving ticket to review status"
+jira issue move "$ticket" "Ready to Review" > /dev/null
+
+echo "$ticket"

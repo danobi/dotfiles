@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Opens a preview of a Markdown file
+#
+# Usage: ./mdp file
+
+set -eu
+
+FILE=${1:-}
+
+if [[ $FILE == "" ]]; then
+  echo "Usage: mdp markdown_file"
+  exit 1
+elif [[ ! -f $FILE ]]; then
+  echo "not found: $FILE"
+  exit 1
+fi
+
+TMPFILE=$(mktemp -u)
+pandoc $FILE -f gfm -o ${TMPFILE}.html
+xdg-open ${TMPFILE}.html

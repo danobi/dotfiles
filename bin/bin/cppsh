@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Usage: ./cppsh [-l] [FILE]
+#
+# -l: open last scratch file
+#
+
+set -euo pipefail
+
+# If no file supplied, then we create a default one
+if [ -z ${1+x} ]; then
+    FILE=$(mktemp /tmp/cppsh-XXXXX.cpp)
+
+    cat << 'EOF' > "$FILE"
+#include <iostream>
+#include <string>
+
+int main() {
+    std::cout << "changeme" << std::endl;
+}
+EOF
+elif [ "$1" == "-l" ]; then
+    FILE=$(head -1 /tmp/cppsh-last)
+else
+    FILE="$1"
+fi
+
+echo "$FILE" > /tmp/cppsh-last
+OUT=$(mktemp /tmp/cppsh-aout-XXXXX)
+
+"$EDITOR" "$FILE"
+g++ --std=c++1z -o "$OUT" "$FILE"
+chmod +x "$OUT"
+echo "$FILE"
+echo "--------------------"
+"$OUT"
+
