@@ -1,0 +1,131 @@
+/* Copyright (C) 2020-2021, Mohammad-Reza Nabipoor */
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* WIP networking formats */
+
+/* set_endian (ENDIAN_BIG); */
+
+/* IPv4
+ *
+ * https://en.wikipedia.org/wiki/IPv4
+ * - Updated Specification of the IPv4 ID Field
+ *   https://tools.ietf.org/html/rfc6864
+ */
+
+type IPv4_Header =
+  struct
+  {
+    uint<4> version = 4;
+    offset<uint<4>,32> ihl : ihl >= 20#B; /* Internet Header Length */
+    uint<6> dscp;  /* Differentiated Services Code Point */
+    uint<2> ecn;   /* Explicit Congestion Notification */
+    offset<uint16,B> total_length : /* including header and data */
+      total_length >= 20#B;
+    uint16   identification;
+    uint<3>  flags;
+    uint<13> fragment_offset;
+    uint8    ttl; /* Time To Live */
+    uint8    protocol;  /* RFC 790 */
+    uint16   header_checksum;
+    struct uint32
+    {
+      byte b0;
+      byte b1;
+      byte b2;
+      byte b3;
+    } src;  /* Source IP Address */
+    struct uint32
+    {
+      byte b0;
+      byte b1;
+      byte b2;
+      byte b3;
+    } dst;  /* Destination IP Address */
+
+    byte[ihl - 20#B] options; // FIXME
+  };
+
+type IPv4_Packet =
+  struct
+  {
+    IPv4_Header header;
+
+    var body_offset = OFFSET;
+    var body_length = header.total_length - header.ihl;
+
+    byte[0] @ body_offset + body_length; /* End-of-packet marker */
+
+    method get_body_offset = offset<uint16,B>: { return body_offset; }
+    method get_body_length = offset<uint16,B>: { return body_length; }
+    method get_body = byte[]:
+      {
+        return byte[body_length] @ body_offset;
+      }
+  };
+
+/* UDP (User Datagram Protocol) transport layer (IETF RFC 768)
+ *
+ * https://tools.ietf.org/html/rfc768
+ */
+
+type UDP_Header =
+  struct
+  {
+    uint16 src_port;  /* source port */
+    uint16 dst_port;  /* destination port */
+    offset<uint16,B> length;
+    uint16 checksum;
+  };
+
+assert ((UDP_Header {})'size == 8#B);
+
+type UDP_Packet =
+  struct
+  {
+    UDP_Header header;
+
+    var body_offset = OFFSET;
+    var body_length = header.length - header'size;
+
+    byte[0] @ body_offset + body_length; /* End-of-packet marker */
+
+    method get_body_offset = offset<uint16,B>: { return body_offset; }
+    method get_body_length = offset<uint16,B>: { return body_length; }
+    method get_body = byte[]:
+      {
+        return byte[body_length] @ body_offset;
+      }
+  };
+
+type RTP_ExtensionHeader =
+  struct
+  {
+    uint16 id;
+    offset<uint16,32> len;  /* length of the extension in 32-bit units,
+                             * excluding the 32 bits of the this header
+                             */
+    byte[len] data;
+  };
+
+type RTP_Header =
+  struct
+  {
+    uint<2> version;
+    uint<1> padding;
+    uint<1> extension;
+    uint<4> csrc_count;
+    uint<1> marker;
+    uint<7> payload_type;
+    uint16  seq_num;          /* Sequence number */
+    uint32  timestamp;
+    uint32  ssrc;             /* Synchronization source identifier */
+    uint32[csrc_count] csrc;  /* Contributing source identifiers */
+    RTP_ExtensionHeader ext_header if extension;
+  };
+
+type RTP =
+  struct
+  {
+    RTP_Header header;
+    // FIXME
+  };

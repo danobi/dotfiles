@@ -1,0 +1,44 @@
+/* Copyright (C) 2020-2021, Mohammad-Reza Nabipoor */
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+
+/* Work in progress */
+
+/* set_endian (ENDIAN_BIG); */
+
+/* Ethernet frame (layer 2, IEEE 802.3)
+ *
+ * - https://en.wikipedia.org/wiki/Ethernet_frame
+ * - https://ieeexplore.ieee.org/document/7428776
+ * - IEEE 802 Numbers
+ *   https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml
+ */
+
+/* FIXME more numbers? */
+var ETHERNET_TYPE_IPV4 = 0x0800UH,           /* IPv4 */
+    ETHERNET_TYPE_X75_INTERNET = 0x0801UH,   /* X.75 Internet */
+    ETHERNET_TYPE_NBS_INTERNET = 0x0802UH,   /* NBS Internet */
+    ETHERNET_TYPE_ECMA_INTERNET = 0x0803UH,  /* ECMA Internet */
+    ETHERNET_TYPE_CHAOSNET = 0x0804UH,       /* Chaosnet */
+    ETHERNET_TYPE_X25_LEVEL_3 = 0x0805UH,    /* X.25 Level 3 */
+    ETHERNET_TYPE_ARP = 0x0806UH,   /* Address Resolution Protocol (ARP) */
+    ETHERNET_TYPE_QTAG = 0x8100UH,  /* Customer VLAN Tag Type (C-Tag, formerly
+                                     * called the Q-Tag) (initially Wellfleet)
+                                     */
+    ETHERNET_TYPE_IPV6 = 0x86ddUH;  /* IPv6 */
+
+type EthernetHeader =
+  struct
+  {
+    byte[6] dst_mac;     /* destination MAC */
+    byte[6] src_mac;     /* source MAC */
+    uint16  ether_type;  /* Ethertype */   // FIXME 802.1Q
+  };
+
+
+/* FIXME
+    union
+    {
+      uint16 ether_type  : ether_type >= 0x600UH;
+      uint16 payload_len : payload_len <= 1500;
+    } ether_type;
+*/
