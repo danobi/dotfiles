@@ -175,3 +175,6 @@ let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
 let g:lsp_document_highlight_enabled = 0
 let g:lsp_diagnostics_enabled = 0
+
+"Only apply linux coding style where relevant
+let g:linuxsty_patterns = [ "dev/linux", "\.bpf\.c$" ]
