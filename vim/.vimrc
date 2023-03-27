@@ -25,6 +25,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
+Plugin 'github/copilot.vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
