@@ -14,3 +14,6 @@ end
 -- Initialize lazy.nvim
 vim.opt.runtimepath:prepend(lazypath)
 require('lazy').setup('plugins', {})
+
+-- Import config modules
+require('keybindings')
