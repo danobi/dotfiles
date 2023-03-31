@@ -153,8 +153,8 @@ function! Nerdtree_Toggle()
   if (exists("g:NERDTree") && g:NERDTree.IsOpen())
     :NERDTreeClose
   else
-    :NERDTree
     :NERDTreeMirror
+    :NERDTreeFocus
   endif
 endfunction
 
