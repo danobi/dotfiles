@@ -12,6 +12,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
+Plugin 'scrooloose/nerdtree'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'majutsushi/tagbar'
@@ -104,7 +105,7 @@ set noswapfile            "Disable .swp files
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
-nnoremap <Leader>e :Lexplore<CR>
+nnoremap <Leader>e :call Nerdtree_Toggle()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
@@ -148,9 +149,27 @@ function! Strip_Trailing_Whitespace()
   %s/\s\+$//e
 endfunction
 
+function! Nerdtree_Toggle()
+  if (exists("g:NERDTree") && g:NERDTree.IsOpen())
+    :NERDTreeClose
+  else
+    :NERDTree
+    :NERDTreeMirror
+  endif
+endfunction
+
 """-------------------------------------------"""
 """              PLUGIN CONFIG                """
 """-------------------------------------------"""
+"Fix boxes in NERDTREE
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+"Get rid of J & K bindings for Nerdtree b/c they conflict with my bindings
+let g:NERDTreeMapJumpFirstChild = ""
+let g:NERDTreeMapJumpLastChild = ""
+"Fix ^G prefix on everything
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
 "vim-session config
 let g:session_directory = "~/.vim/session"
 let g:session_autoload = "no"
