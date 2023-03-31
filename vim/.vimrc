@@ -105,7 +105,6 @@ set noswapfile            "Disable .swp files
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>e :Lexplore<CR>
-nnoremap <Leader>f :call Toggle_Foldcolumn()<CR>
 nnoremap <Leader>j :join<CR>
 nnoremap <Leader>l :call Line_Number_Toggle()<CR>
 nnoremap <Leader>s :call Strip_Trailing_Whitespace()<CR>
@@ -129,7 +128,6 @@ nnoremap <C-L> <C-w>l
 nnoremap J 5j
 nnoremap K 5k
 inoremap jj <Esc>
-inoremap <C-e> <C-o>$
 xnoremap J 5j
 xnoremap K 5k
 
@@ -148,15 +146,6 @@ endfunction
 "Strips trailing whitespace from every line
 function! Strip_Trailing_Whitespace()
   %s/\s\+$//e
-endfunction
-
-"Toggles foldcolumn (useful for seeing where folds are)
-function! Toggle_Foldcolumn()
-  if &foldcolumn
-    setlocal foldcolumn=0
-  else
-    setlocal foldcolumn=2
-  endif
 endfunction
 
 """-------------------------------------------"""
