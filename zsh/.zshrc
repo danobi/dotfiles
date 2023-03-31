@@ -23,6 +23,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 export MAKEFLAGS="--no-print-directory"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden'
 
 # This makes the colored-man-pages oh-my-zsh plugin work (no one knows why)
 export GROFF_NO_SGR=1
