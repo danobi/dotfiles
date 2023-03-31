@@ -116,8 +116,8 @@ nnoremap <Leader>= <C-w>=
 "Toggle paste mode
 nnoremap <leader>p :set paste!<cr>
 nnoremap <F4> :TagbarToggle<CR>
-nnoremap <C-n> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <C-n> gt<CR>
+nnoremap <C-p> gT<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap Y y$
