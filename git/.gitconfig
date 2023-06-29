@@ -8,6 +8,8 @@
 	fixes = show -s --pretty='format:%h (\"%s\")\n'
         # Usage: `git testedby`
 	testedby = "!printf 'Tested-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
+        # Usage: `git ackedby`
+	ackedby = "!printf 'Acked-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
         # Usage: `git patchset $REF [GIT_FORMAT_PATCH_ARGS..]`
         patchset = "!linux-patchset.sh"
 [push]
