@@ -1,29 +1,31 @@
 [user]
-	name = Daniel Xu
-	email = dxu@dxuuu.xyz
+        name = Daniel Xu
+        email = dxu@dxuuu.xyz
 [core]
-	excludesfile = ~/.gitconf/gitignore
+        excludesfile = ~/.gitconf/gitignore
 [alias]
         # Usage: `git fixes $SHA`
-	fixes = show -s --pretty='format:%h (\"%s\")\n'
+        fixes = show -s --pretty='format:%h (\"%s\")\n'
         # Usage: `git testedby`
-	testedby = "!printf 'Tested-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
+        testedby = "!printf 'Tested-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
+        # Usage: `git ackedby`
+        ackedby = "!printf 'Acked-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
         # Usage: `git patchset $REF [GIT_FORMAT_PATCH_ARGS..]`
         patchset = "!linux-patchset.sh"
 [push]
-	default = simple
+        default = simple
 [rebase]
-	autosquash = true
+        autosquash = true
 [format]
-	coverletter = auto
-	signoff = true
-	thread = shallow
+        coverletter = auto
+        signoff = true
+        thread = shallow
 [sendemail]
-	smtpuser = dxu@dxuuu.xyz
-	smtpserver = smtp.fastmail.com
-	smtpserverport = 587
-	smtpencryption = tls
-	confirm = auto
-	suppresscc = self
+        smtpuser = dxu@dxuuu.xyz
+        smtpserver = smtp.fastmail.com
+        smtpserverport = 587
+        smtpencryption = tls
+        confirm = auto
+        suppresscc = self
 [pull]
-	ff = only
+        ff = only
