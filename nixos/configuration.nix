@@ -7,7 +7,7 @@ in
     "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/936e4649098d6a5e0762058cb7687be1b2d90550.tar.gz" }/raspberry-pi/4"
   ];
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "23.05";
 
   fileSystems = {
     "/" = {
@@ -20,6 +20,7 @@ in
   environment.systemPackages = with pkgs; [
     sshfs
     tmux
+    wol
     vim
   ];
 
