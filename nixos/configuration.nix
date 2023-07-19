@@ -4,7 +4,7 @@ let
 in
 {
   imports = [
-    "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/936e4649098d6a5e0762058cb7687be1b2d90550.tar.gz" }/raspberry-pi/4"
+    "${fetchTarball "https://github.com/NixOS/nixos-hardware/archive/d4ea64f2063820120c05f6ba93ee02e6d4671d6b.tar.gz" }/raspberry-pi/4"
   ];
 
   system.stateVersion = "23.05";
@@ -42,7 +42,7 @@ in
     tailscale.enable = true;
     openssh = {
       enable = true;
-      passwordAuthentication = false;
+      settings.PasswordAuthentication = false;
     };
     unifi = {
       enable = true;
@@ -52,6 +52,10 @@ in
     adguardhome = {
       enable = true;
       openFirewall = true;
+      settings = {
+        bind_host = "0.0.0.0";
+        bind_port = 3000;
+      };
     };
     jellyfin = {
       enable = true;
@@ -85,7 +89,9 @@ in
   };
 
   # Enable GPU acceleration
-  hardware.raspberry-pi."4".fkms-3d.enable = true;
+  # Currently disabled due to https://github.com/NixOS/nixos-hardware/issues/631
+  #hardware.raspberry-pi."4".fkms-3d.enable = true;
+
   hardware.pulseaudio.enable = true;
   # Allow proprietary packages
   nixpkgs.config.allowUnfree = true;
