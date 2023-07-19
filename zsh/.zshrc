@@ -7,9 +7,6 @@ export MAKEFLAGS="--no-print-directory"
 export FZF_DEFAULT_COMMAND="fd --type f --hidden"
 export EDITOR="vim"
 
-# Do not save command lines into history if they are a repeat of the previous
-setopt HIST_IGNORE_DUPS
-
 # Allow parameter expansion, command subst, arith in PROMPT expansion
 setopt PROMPT_SUBST
 
@@ -18,6 +15,21 @@ unsetopt AUTO_CD
 
 # Theme configuration
 source "${HOME}/.theme.zsh"
+
+# Configure shell history
+HISTFILE=~/.zsh_history
+HISTSIZE=999999
+SAVEHIST=999999
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt INC_APPEND_HISTORY
+bindkey '^R' history-incremental-search-backward
+
+# Configure completion system
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # pastes.dxuuu.xyz helper
 pastes() {
@@ -50,6 +62,7 @@ alias sdi='sudo dnf install'
 alias sag='sudo apt-get install'
 alias pacs='sudo pacman -S'
 alias ls='ls --color=auto'
+alias ll='ls -l'
 alias e='exit'
 alias tmux="TERM=screen-256color tmux"
 alias o="gio open"
