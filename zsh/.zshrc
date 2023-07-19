@@ -1,27 +1,23 @@
-# Theme configuration
-source "${HOME}/.theme.zsh"
-
 # User configuration
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export MAKEFLAGS="--no-print-directory"
-export FZF_DEFAULT_COMMAND='fd --type f --hidden'
+export FZF_DEFAULT_COMMAND="fd --type f --hidden"
+export EDITOR="vim"
 
 # Do not save command lines into history if they are a repeat of the previous
 setopt HIST_IGNORE_DUPS
+
 # Allow parameter expansion, command subst, arith in PROMPT expansion
 setopt PROMPT_SUBST
 
-# Makes `sudoedit` work
-export EDITOR="vim"
-
-# Disables the auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
-
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
+
+# Theme configuration
+source "${HOME}/.theme.zsh"
 
 # pastes.dxuuu.xyz helper
 pastes() {
