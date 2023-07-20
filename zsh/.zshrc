@@ -1,3 +1,6 @@
+# Theme configuration
+source "${HOME}/.theme.zsh"
+
 # User configuration
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -12,9 +15,6 @@ setopt PROMPT_SUBST
 
 # Turn off the ridiculous auto cd feature
 unsetopt AUTO_CD
-
-# Theme configuration
-source "${HOME}/.theme.zsh"
 
 # Configure shell history
 HISTFILE=~/.zsh_history
