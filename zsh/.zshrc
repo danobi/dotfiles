@@ -31,6 +31,9 @@ compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# Use emacs-style line editor bindings
+bindkey -e
+
 # pastes.dxuuu.xyz helper
 pastes() {
   [ -t 0 ] && echo "^C to cancel, ^D to send"
