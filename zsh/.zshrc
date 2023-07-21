@@ -34,6 +34,11 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # Use emacs-style line editor bindings
 bindkey -e
 
+# If you don't set the LESS env var, git defaults it to LESS=FRX
+# which does annoying stuff like auto-exit if the entire file fits
+# on the screen. So keep it simple and only get colorized output.
+export LESS=R
+
 # pastes.dxuuu.xyz helper
 pastes() {
   [ -t 0 ] && echo "^C to cancel, ^D to send"
