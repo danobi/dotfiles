@@ -82,6 +82,8 @@ bind index                        za  collapse-thread
 macro pager,index                 p   "<pipe-message>cless<enter>"
 macro pager,index                 a   "<pipe-message>git am -3<enter>"
 macro pager,index                 r   "<group-reply><enter><enter><enter>"
+# Misc
+macro index                       \$  "<imap-fetch-mail><sync-mailbox>"
 
 #
 # Colors
