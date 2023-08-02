@@ -34,6 +34,10 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # Use emacs-style line editor bindings
 bindkey -e
 
+# Make home/end keys work
+bindkey  "^[[1~"  beginning-of-line
+bindkey  "^[[4~"   end-of-line
+
 # If you don't set the LESS env var, git defaults it to LESS=FRX
 # which does annoying stuff like auto-exit if the entire file fits
 # on the screen. So keep it simple and only get colorized output.
