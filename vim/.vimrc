@@ -178,6 +178,9 @@ let g:session_command_aliases = 1
 "Autofocus tagbar when it's opened
 let g:tagbar_autofocus = 1
 
+"Disable column ruler when max_line_length is used
+let g:EditorConfig_max_line_indicator = "none"
+
 "Disable diagnostics support
 let g:lsp_diagnostics_signs_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
