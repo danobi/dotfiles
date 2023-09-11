@@ -3,7 +3,7 @@
 set -e
 
 DIR=~/dotfiles/   # dotfiles repo -- the repo *HAS* to be cloned into the home directory
-DEFAULT_UNSTOW="vim zsh tmux git oh-my-zsh alacritty ssh bin"
+DEFAULT_UNSTOW="vim zsh tmux git alacritty ssh bin"
 DEFAULT_PKGS="zsh vim tmux git stow ctags"
 
 install_stuff () {
@@ -30,9 +30,6 @@ install_stuff () {
   $PKG_MANAGER_CMD $DEFAULT_PKGS
 
   # Let's clone some specific git repos
-  if [[ ! -d ~/.oh-my-zsh/ ]]; then
-    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh/
-  fi
   if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   fi
