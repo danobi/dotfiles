@@ -8,6 +8,9 @@ if status is-interactive
   # Disable argv[0] highlighting
   set -U fish_color_command
 
+  # Disable underlining valid filepaths
+  set -U fish_color_valid_path
+
   # Aliases
   abbr --add mv mv -i
   abbr --add cp cp -i
