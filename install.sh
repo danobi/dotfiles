@@ -3,8 +3,8 @@
 set -e
 
 DIR=~/dotfiles/   # dotfiles repo -- the repo *HAS* to be cloned into the home directory
-DEFAULT_UNSTOW="vim zsh tmux git alacritty ssh bin"
-DEFAULT_PKGS="zsh vim tmux git stow ctags"
+DEFAULT_UNSTOW="vim fish tmux git alacritty ssh bin"
+DEFAULT_PKGS="fish vim tmux git stow ctags"
 
 install_stuff () {
   # Figure out which package manager to use
@@ -37,12 +37,9 @@ install_stuff () {
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   fi
 
-  # Move the colliding .zshrc so stow doesn't error out
-  if [[ -e ~/.zshrc ]]; then
-    if [[ -e ~/.zshrc_OLD ]]; then
-      rm ~/.zshrc_OLD
-    fi
-    mv ~/.zshrc ~/.zshrc_OLD
+  # Move the colliding .config/fish so stow doesn't error out
+  if [ -d ~/.config/fish ]; then
+    mv ~/.config/fish ~/.config/fish.old
   fi
 }
 
@@ -60,8 +57,8 @@ post_install () {
   # Install vim plugins
   vim +PluginInstall +qall
 
-  # chsh over to zsh
-  chsh -s $(which zsh)
+  # chsh over to fish
+  chsh -s $(which fish)
 }
 
 install_stuff
