@@ -11,6 +11,8 @@ if status is-interactive
   # Disable underlining valid filepaths
   set -U fish_color_valid_path
 
+  set -Ux EDITOR vim
+
   # Aliases
   abbr --add mv mv -i
   abbr --add cp cp -i
@@ -18,7 +20,6 @@ if status is-interactive
   abbr --add pacs sudo pacman -S
   abbr --add ll ls -l
   abbr --add e exit
-  abbr --add tmux "TERM screen-256color tmux"
   abbr --add o "gio open"
 
   # Git aliases
