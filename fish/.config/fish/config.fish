@@ -19,6 +19,11 @@ if status is-interactive
   # on the screen. So keep it simple and only get colorized output.
   set -Ux LESS R
 
+  # Configure $PATH
+  fish_add_path $HOME/bin
+  fish_add_path $HOME/.local/bin
+  fish_add_path $HOME/.cargo/bin
+
   # Aliases
   abbr --add mv mv -i
   abbr --add cp cp -i
