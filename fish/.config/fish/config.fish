@@ -11,7 +11,18 @@ if status is-interactive
   # Disable underlining valid filepaths
   set -U fish_color_valid_path
 
+  # Set default editor
   set -Ux EDITOR vim
+
+  # If you don't set the LESS env var, git defaults it to LESS=FRX
+  # which does annoying stuff like auto-exit if the entire file fits
+  # on the screen. So keep it simple and only get colorized output.
+  set -Ux LESS R
+
+  # Configure $PATH
+  fish_add_path $HOME/bin
+  fish_add_path $HOME/.local/bin
+  fish_add_path $HOME/.cargo/bin
 
   # Aliases
   abbr --add mv mv -i
