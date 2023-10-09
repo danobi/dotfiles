@@ -24,6 +24,14 @@ if status is-interactive
   fish_add_path $HOME/.local/bin
   fish_add_path $HOME/.cargo/bin
 
+  # pastes.dxuuu.xyz helper
+  function pastes
+    if test -t 0
+        echo "^C to cancel, ^D to send"
+    end
+    curl https://pastes.dxuuu.xyz --data-binary '@-'
+  end
+
   # github PR helper
   function ghpr
     # Check if two arguments are provided
