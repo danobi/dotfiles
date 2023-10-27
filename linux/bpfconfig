@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 6.5.0 Kernel Configuration
+# Linux/x86 6.6.0-rc7 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 13.2.1 20230801"
 CONFIG_CC_IS_GCC=y
@@ -1243,6 +1243,8 @@ CONFIG_TCP_CONG_HTCP=m
 CONFIG_DEFAULT_CUBIC=y
 # CONFIG_DEFAULT_RENO is not set
 CONFIG_DEFAULT_TCP_CONG="cubic"
+CONFIG_TCP_SIGPOOL=y
+# CONFIG_TCP_AO is not set
 CONFIG_TCP_MD5SIG=y
 CONFIG_IPV6=y
 CONFIG_IPV6_ROUTER_PREF=y
@@ -1671,6 +1673,11 @@ CONFIG_DMA_SHARED_BUFFER=y
 # CONFIG_MHI_BUS_EP is not set
 # end of Bus devices
 
+#
+# Cache Drivers
+#
+# end of Cache Drivers
+
 CONFIG_CONNECTOR=y
 CONFIG_PROC_EVENTS=y
 
@@ -2074,6 +2081,7 @@ CONFIG_NET_FC=y
 CONFIG_VETH=y
 CONFIG_VIRTIO_NET=y
 # CONFIG_NLMON is not set
+# CONFIG_NETKIT is not set
 # CONFIG_NET_VRF is not set
 # CONFIG_ARCNET is not set
 CONFIG_ETHERNET=y
@@ -2173,6 +2181,7 @@ CONFIG_NET_VENDOR_INTEL=y
 # CONFIG_ICE is not set
 # CONFIG_FM10K is not set
 # CONFIG_IGC is not set
+# CONFIG_IDPF is not set
 # CONFIG_JME is not set
 CONFIG_NET_VENDOR_ADI=y
 # CONFIG_ADIN1110 is not set
@@ -2733,7 +2742,6 @@ CONFIG_I2C_BOARDINFO=y
 CONFIG_I2C_COMPAT=y
 # CONFIG_I2C_CHARDEV is not set
 # CONFIG_I2C_MUX is not set
-# CONFIG_I2C_ATR is not set
 CONFIG_I2C_HELPER_AUTO=y
 
 #
@@ -4820,8 +4828,6 @@ CONFIG_GENERIC_PHY=y
 
 # CONFIG_PHY_PXA_28NM_HSIC is not set
 # CONFIG_PHY_PXA_28NM_USB2 is not set
-# CONFIG_PHY_RTK_RTD_USB2PHY is not set
-# CONFIG_PHY_RTK_RTD_USB3PHY is not set
 # CONFIG_PHY_INTEL_LGM_EMMC is not set
 # end of PHY Subsystem
 
@@ -5076,7 +5082,6 @@ CONFIG_NLS_ASCII=y
 # CONFIG_NLS_MAC_ROMANIAN is not set
 # CONFIG_NLS_MAC_TURKISH is not set
 # CONFIG_NLS_UTF8 is not set
-# CONFIG_NLS_UCS2_UTILS is not set
 # CONFIG_DLM is not set
 CONFIG_UNICODE=y
 # CONFIG_UNICODE_NORMALIZATION_SELFTEST is not set
