@@ -26,6 +26,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'prabirshrestha/vim-lsp'
 Plugin 'mattn/vim-lsp-settings'
+Plugin 'danobi/prr', {'rtp': 'vim/'}
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -101,6 +102,7 @@ set hlsearch              "Highlight search terms
 set splitbelow            "Split new horizontal splits below
 set splitright            "Split new vertical splits to the right
 set noswapfile            "Disable .swp files
+set foldlevel=9999        "Keep all folds expanded on startup
 
 "Remaps
 nnoremap <Leader>a :Ack!<Space>
