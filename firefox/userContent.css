@@ -1,0 +1,11 @@
+/*
+ * Firefox users: this goes in $PROFILE_FOLDER/chrome/userContent.css
+ * where $PROFILE_FOLDER is platform-specific
+ *
+ * cf. http://kb.mozillazine.org/UserContent.css
+ *     http://kb.mozillazine.org/Profile_folder_-_Firefox
+ */
+@-moz-document url-prefix(https://lore.kernel.org/) { /* moz-only */
+	.add { color:#0550ae; background:#e6ffe6 !important }  /* diff post-image lines */
+	.del { color:#0550ae; background:#ffebe9 !important }  /* diff pre-image lines */
+} /* moz-only */
