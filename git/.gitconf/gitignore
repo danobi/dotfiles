@@ -2,3 +2,5 @@
 *.swp
 *.swo
 outgoing/
+# For clangd
+.cache/
