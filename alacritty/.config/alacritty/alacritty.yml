@@ -289,6 +289,7 @@ hints:
      binding:
        key: U
        mods: Control|Shift
+     hyperlinks: true
 
 # Mouse bindings
 #
