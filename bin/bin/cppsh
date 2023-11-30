@@ -29,7 +29,7 @@ echo "$FILE" > /tmp/cppsh-last
 OUT=$(mktemp /tmp/cppsh-aout-XXXXX)
 
 "$EDITOR" "$FILE"
-g++ --std=c++1z -o "$OUT" "$FILE"
+g++ --std=c++20 -o "$OUT" "$FILE"
 chmod +x "$OUT"
 echo "$FILE"
 echo "--------------------"
