@@ -72,13 +72,35 @@ augroup Binary
   au BufWritePost *.bin set nomod | endif
 augroup END
 
+"Automatically set up highlighting for `.prr` review files
+"Use `:hi` to see the various definitions we kinda abuse here
+augroup Prr
+  autocmd!
+  autocmd BufRead,BufNewFile *.prr set syntax=on
+
+  "Make prr added/deleted highlighting more apparent
+  autocmd BufRead,BufNewFile *.prr hi! link prrAdded Function
+  autocmd BufRead,BufNewFile *.prr hi! link prrRemoved Keyword
+  autocmd BufRead,BufNewFile *.prr hi! link prrFile Special
+
+  "Make file delimiters more apparent
+  autocmd BufRead,BufNewFile *.prr hi! link prrHeader TabLineSel
+
+  "Reduce all the noise from color
+  autocmd BufRead,BufNewFile *.prr hi! link prrIndex Special
+  autocmd BufRead,BufNewFile *.prr hi! link prrChunk Special
+  autocmd BufRead,BufNewFile *.prr hi! link prrChunkH Special
+  autocmd BufRead,BufNewFile *.prr hi! link prrTagName Special
+  autocmd BufRead,BufNewFile *.prr hi! link prrResult Special
+augroup END
+
 """-------------------------------------------"""
 """          BUILT IN FUNCTIONALITY           """
 """-------------------------------------------"""
 
 "Built in settings
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
-syntax off
+syntax manual             "Syntax off by default, but allow per-buffer toggling
 set nonu                  "Turn off line numbers; they're kind of useless anyways
 set ruler                 "Always shows info on bottom
 set cursorline            "Highlight current line
