@@ -84,7 +84,7 @@ augroup Prr
   autocmd BufRead,BufNewFile *.prr hi! link prrFile Special
 
   "Make file delimiters more apparent
-  autocmd BufRead,BufNewFile *.prr hi! link prrHeader TabLineSel
+  autocmd BufRead,BufNewFile *.prr hi! link prrHeader Directory
 
   "Reduce all the noise from color
   autocmd BufRead,BufNewFile *.prr hi! link prrIndex Special
