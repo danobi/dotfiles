@@ -4,3 +4,5 @@
 outgoing/
 # For clangd
 .cache/
+# Local prr configs
+.prr.toml
