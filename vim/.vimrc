@@ -101,6 +101,7 @@ augroup END
 "Built in settings
 fixdel                    "Sometimes hitting backspace in :command prints ^* instead
 syntax manual             "Syntax off by default, but allow per-buffer toggling
+syntax sync minlines=9999 "Making state-based syntax highlighting work for large files (used for prr)
 set nonu                  "Turn off line numbers; they're kind of useless anyways
 set ruler                 "Always shows info on bottom
 set cursorline            "Highlight current line
