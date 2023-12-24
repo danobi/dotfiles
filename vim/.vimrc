@@ -216,4 +216,4 @@ let g:lsp_diagnostics_enabled = 0
 let g:lsp_log_file = "/tmp/vim-lsp.log"
 
 "Only apply linux coding style where relevant
-let g:linuxsty_patterns = [ "dev/linux", "\.bpf\.c$" ]
+let g:linuxsty_patterns = [ "dev/linux", "\.c$" ]
