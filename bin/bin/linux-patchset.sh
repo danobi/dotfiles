@@ -15,7 +15,7 @@ OUTDIR="${ROOT}/outgoing/$(git rev-parse --abbrev-ref HEAD)"
 
 # Note we generate empty To: and Cc: headers so `linux-format-patch.py`
 # does not have to figure out the insertion point.
-git format-patch -o "$OUTDIR" -s --to "" --cc "" "$@"
+git format-patch -o "$OUTDIR" --cover-from-description=auto -s --to "" --cc "" "$@"
 
 # Add To: and Cc: based on `get_maintainer.pl`
 LINUX_ROOT="$ROOT" linux-address-patchset.py "$OUTDIR"
