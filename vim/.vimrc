@@ -55,11 +55,6 @@ else
   colorscheme itg_flat
 endif
 
-"Prevents syntax highlighting clobbering
-if !exists("g:syntax_on")
-  syntax enable
-endif
-
 "Automatically decode and encode files ending in `.bin` with xxd
 augroup Binary
   au!
