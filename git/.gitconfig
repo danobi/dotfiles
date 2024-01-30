@@ -29,3 +29,5 @@
         suppresscc = self
 [pull]
         ff = only
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
