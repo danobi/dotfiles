@@ -1,14 +1,6 @@
-live_config_reload = true
-working_directory = "None"
+[window]
+dimensions = { columns = 80, lines = 50 }
 
 [font]
 size = 13.0
-
-[[hints.enabled]]
-command = "xdg-open"
-hyperlinks = true
-post_processing = true
-regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
-
-[font.normal]
-family = "inconsolata"
+normal = { family = "inconsolata", style = "normal" }
