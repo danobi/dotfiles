@@ -1,6 +1,10 @@
+live_config_reload = true
+
 [window]
 dimensions = { columns = 80, lines = 50 }
+dynamic_title = false
+padding = { x = 3, y = 3 }
 
 [font]
-size = 13.0
+size = 11.0
 normal = { family = "inconsolata", style = "normal" }
