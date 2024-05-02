@@ -3,7 +3,7 @@
 set -e
 
 DIR=~/dotfiles/   # dotfiles repo -- the repo *HAS* to be cloned into the home directory
-DEFAULT_UNSTOW="vim fish tmux git alacritty ssh bin"
+DEFAULT_UNSTOW="vim fish tmux git alacritty bin"
 DEFAULT_PKGS="fish vim tmux git stow ctags"
 
 install_stuff () {
