@@ -12,6 +12,8 @@
         ackedby = "!printf 'Acked-by: %s <%s>\n' \"$(git config --get user.name)\" \"$(git config --get user.email)\""
         # Usage: `git patchset $REF [GIT_FORMAT_PATCH_ARGS..]`
         patchset = "!linux-patchset.sh"
+        # Usage: `git description [$REF]`
+        description = "!f() { NAME=${1:-$(git rev-parse --abbrev-ref HEAD)}; git config --get branch.${NAME}.description; }; f"
 [push]
         default = simple
 [rebase]
