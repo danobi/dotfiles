@@ -213,3 +213,7 @@ let g:lsp_log_file = "/tmp/vim-lsp.log"
 
 "Only apply linux coding style where relevant
 let g:linuxsty_patterns = [ "dev/linux", "\.c$" ]
+
+"Work around issue where cursor goes to top of buffer when opening popup.
+"See: https://github.com/junegunn/fzf.vim/issues/1164
+let g:fzf_layout = { 'down': '~40%' }
