@@ -2,10 +2,14 @@
 
 """
 This script prints out tabular information about how many interrupts
-each CPU received for a particular device.
+each CPU received for a particular irq descriptor.
+
+Note we are only doing a substring match for the irq descriptor name.
 
 Example usage:
     ./interrupt_mapping.py eth0
+    ./interrupt_mapping.py eth
+    ./interrupt_mapping.py virtio
 """
 
 from collections import defaultdict
@@ -28,15 +32,20 @@ cpus = [cpu.strip() for cpu in lines[0].strip().split()]
 cpu_to_irqs = defaultdict(int)
 for row in lines[1:]:
     parts = [val.strip() for val in row.strip().split()]
-    if parts[-1] != device_name:
+    if device_name not in parts[-1]:
         continue
 
     for idx, val in enumerate(parts[1:]):
         # Handle trailing irq info
         if idx >= len(cpus):
             break
-        cpu_to_irqs[cpus[idx]] += int(val)
 
-# Dump table
-for cpu, count in cpu_to_irqs.items():
+        interrupts = int(val)
+        if interrupts == 0:
+            continue
+
+        cpu_to_irqs[cpus[idx]] += interrupts
+
+# Dump table, sorting by CPU number
+for cpu, count in sorted(cpu_to_irqs.items(), key=lambda x: int(x[0][3:])):
     print(f"{cpu:10} {count:10} interrupts")
