@@ -133,7 +133,6 @@ nnoremap <Leader>t :FZF<CR>
 nnoremap <Leader>w :w<CR>
 "Open definition in vertical split
 nnoremap <Leader>d :vsp <CR>:exec(":LspDefinition")<CR>
-nnoremap <Leader>= <C-w>=
 "Toggle paste mode
 nnoremap <leader>p :set paste!<cr>
 nnoremap <F4> :TagbarToggle<CR>
