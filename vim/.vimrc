@@ -135,6 +135,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>d :vsp <CR>:exec(":LspDefinition")<CR>
 "Toggle paste mode
 nnoremap <leader>p :set paste!<cr>
+nnoremap <leader>r G:r!git ackedby<CR>
 nnoremap <F4> :TagbarToggle<CR>
 nnoremap <C-n> gt<CR>
 nnoremap <C-p> gT<CR>
