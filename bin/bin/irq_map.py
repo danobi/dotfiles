@@ -13,13 +13,17 @@ Example usage:
 """
 
 from collections import defaultdict
+import os
 import sys
 
 if len(sys.argv) != 2:
     print(f"Usage: {sys.argv[0]} device_name")
     sys.exit(1)
 
+# Gather which interrupt numbers the interface is registered with.
 device_name = sys.argv[1]
+msi_irqs_dir = f"/sys/class/net/{device_name}/device/msi_irqs"
+irqs = {irq for irq in os.listdir(msi_irqs_dir)}  # NB: set of strings
 
 # Slurp lines
 with open("/proc/interrupts", "r") as f:
@@ -32,7 +36,8 @@ cpus = [cpu.strip() for cpu in lines[0].strip().split()]
 cpu_to_irqs = defaultdict(int)
 for row in lines[1:]:
     parts = [val.strip() for val in row.strip().split()]
-    if device_name not in parts[-1]:
+    irq = parts[0][:-1]
+    if irq not in irqs:
         continue
 
     for idx, val in enumerate(parts[1:]):
