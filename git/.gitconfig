@@ -14,6 +14,8 @@
         patchset = "!linux-patchset.sh"
         # Usage: `git description [$REF]`
         description = "!f() { NAME=${1:-$(git rev-parse --abbrev-ref HEAD)}; git config --get branch.${NAME}.description; }; f"
+        # Usage: `git respin`
+        respin = "!linux-respin.sh"
 [push]
         default = simple
 [rebase]
