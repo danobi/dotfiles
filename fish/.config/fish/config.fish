@@ -19,6 +19,9 @@ if status is-interactive
   # on the screen. So keep it simple and only get colorized output.
   set -Ux LESS R
 
+  # Always use LLVM to build kernel
+  set -Ux MAKEFLAGS "LLVM=1"
+
   # Configure $PATH
   fish_add_path $HOME/bin
   fish_add_path $HOME/.local/bin
