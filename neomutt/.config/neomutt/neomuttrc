@@ -90,7 +90,7 @@ macro index                       \$  "<imap-fetch-mail><sync-mailbox>"
 #
 # Colors
 #
-color   quoted  cyan            black
+color   quoted  cyan            default
 # Unread messages
 color   index   green           default         "~U"
 # Unread, unreferenced messages
