@@ -42,7 +42,7 @@ if status is-interactive
 
   # Git aliases
   abbr --add gb git branch
-  abbr --add gc git commit
+  abbr --add gc git commit -s
   abbr --add gd git diff
   abbr --add gdh git diff HEAD
   abbr --add gds git diff --staged
