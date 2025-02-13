@@ -12,11 +12,12 @@ if [ -z ${1+x} ]; then
     FILE=$(mktemp /tmp/cppsh-XXXXX.cpp)
 
     cat << 'EOF' > "$FILE"
-#include <iostream>
+#include <cstdint>
+#include <print>
 #include <string>
 
 int main() {
-    std::cout << "changeme" << std::endl;
+  std::println("hello world!");
 }
 EOF
 elif [ "$1" == "-l" ]; then
@@ -29,7 +30,7 @@ echo "$FILE" > /tmp/cppsh-last
 OUT=$(mktemp /tmp/cppsh-aout-XXXXX)
 
 "$EDITOR" "$FILE"
-g++ --std=c++20 -o "$OUT" "$FILE"
+g++ --std=c++23 -o "$OUT" "$FILE"
 chmod +x "$OUT"
 echo "$FILE"
 echo "--------------------"
